@@ -1,0 +1,87 @@
+﻿/* Shared */
+.marginbottom{
+    margin-bottom: 70px;
+}
+.maxwidth{
+    width:100%;
+}
+
+/* Main banner */
+.mainbanner {
+    background-image: url('../images/mainpage/banner1.png');
+    padding: 10%;
+}
+.mainbanertext {
+    color:white;
+    margin-bottom: 30px;
+}
+.buttoncolor{
+    color:white !important;
+    border-color: white !important;
+}
+
+/* Why choose us */
+.whylayout {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: #215357;
+}
+
+.itemlayout {
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.itemwidth{
+    width:33%;
+    float:left;
+}
+
+.titletext {
+    color: #215357;
+    font-weight: bold;
+}
+
+.whytextbox {
+    width: 139px;
+    margin-left: 50px;
+}
+
+.whytextboxlastitem {
+    width: 155px;
+    margin-left: 50px;
+}
+
+.whyimage{
+    width:100px;
+}
+
+/* Do better by knowing our people better*/
+.dolayout {
+    background-color: #F5F5F5;
+    overflow: hidden;
+}
+.doimgwidth{
+    width:60%;
+    float:left;
+}
+.dotextbox {
+    width: 40%;
+    float: left;
+    padding: 7%;
+}
+
+.dotitle {
+    font-size: 30px;
+    line-height: 31px;
+    color: #215357;
+    font-weight: bold;
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.dotext {
+    width: 93%;
+}

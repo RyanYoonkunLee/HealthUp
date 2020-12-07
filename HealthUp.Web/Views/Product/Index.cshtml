@@ -1,0 +1,30 @@
+﻿@model List<HealthUp.ViewModel.ProductViewModel>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Product List</h1>
+<a href='@Url.Action("CreateProduct","Product")'>
+    <input type="button" value="Create" />
+</a>
+<table>
+    <thead>
+        <tr>
+            <td>No.</td>
+            <td>Name</td>
+            <td>Functions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.number</td>
+                <td>@Html.ActionLink(item.name, "Detail", "Product", new {id = item.id})</td>
+                <td>
+                    @Html.ActionLink("Update", "Update", "Product", new {id = item.id})
+                    @Html.ActionLink("Delete", "Delete", "Product", new {id = item.id})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HealthUp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Shared.css" />
+
+    <script type="text/javascript">
+        function random() {
+            var random = Math.floor(Math.random() * 3) + 1;
+            var image = "url('../images/mainpage/banner" + random + ".png')";
+            document.getElementById("mainbanner").style.backgroundImage = image;
+        }
+    </script>
+</head>
+<body class="container-fluid mb-0" onload="random()">
+    <header>
+        <div class="max-width">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/mainpage/heath up logo_Colour.png" /></a>
+
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse max-width">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark nav-margin" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark nav-margin" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark nav-margin" asp-area="" asp-controller="Article" asp-action="Index">Health Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark nav-margin" asp-area="" asp-controller="Story" asp-action="Index">Our Story</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid p-0">
+        <main role="main">
+            <div class="bodymargin overflow-hidden">
+                @RenderBody()
+            </div>           
+        </main>
+    </div>
+
+    <footer class="text-muted footerlayout bodymargin">
+        <div class="container-fluid overflow-hidden">
+            <div class="footer_menu_layout">
+                <a class="footertext" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo-footer" src="~/images/mainpage/heath up logo_White.png" /></a>
+            </div>
+            <div class="footer_menu_layout">
+                <div class="footertext">
+                    <p class="footerheading"><strong>CONTACT US</strong></p>
+                    <p class="footermenumargin"><strong>Phone: </strong>+64 9 442 5992</p>
+                    <p class="footermenumargin"><strong>Email: </strong>healthup777@gmail.com</p>
+                    <p class="footermenumargin"><strong>Address: </strong>HealthUP Corporation Inc,</p>
+                    <p class="footermenumargin">129 Onewa Road, Northcote, Auckland</p>
+                </div>
+            </div>
+            <div class="footer_menu_layout">
+                <div class="footertext">
+                    <p class="footerheading"><strong>HEALTHUP</strong></p>
+                    <a class="footermenulink" asp-area="" asp-controller="Product" asp-action="Index"><p class="footermenumargin">Our products</p></a>
+                    <a class="footermenulink" asp-area="" asp-controller="Article" asp-action="Index"><p class="footermenumargin">Health Article</p></a>
+                    <a class="footermenulink" asp-area="" asp-controller="Story" asp-action="Index"><p class="footermenumargin">Our Story</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-width">©2020 Health Well Ltd. Auckland. All Rights Reserved.</div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

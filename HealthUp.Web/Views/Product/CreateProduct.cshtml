@@ -1,0 +1,19 @@
+﻿@model HealthUp.ViewModel.ProductViewModel;
+@{
+    ViewData["Title"] = "CreateProduct";
+}
+
+<h1>CreateProduct</h1>
+@using (Html.BeginForm("SendProduct", "Product", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.name);
+    @Html.TextBoxFor(m => m.name);
+    @Html.LabelFor(m => m.description);
+    @Html.TextBoxFor(m => m.description);
+    @Html.LabelFor(m => m.benefits);
+    @Html.TextBoxFor(m => m.benefits);
+    @Html.LabelFor(m => m.size);
+    @Html.TextBoxFor(m => m.size);
+    <input type="submit" value="Submit" />
+
+}
