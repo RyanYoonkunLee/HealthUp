@@ -5,11 +5,19 @@
 .maxwidth{
     width:100%;
 }
+.titlecolor {
+    color: #215357;
+}
+.textcolor {
+    color: #293336
+}
 
 /* Main banner */
 .mainbanner {
     background-image: url('../images/mainpage/banner1.png');
-    padding: 10%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 13%;
 }
 .mainbanertext {
     color:white;
@@ -27,32 +35,26 @@
     margin-bottom: 70px;
     color: #215357;
 }
-
 .itemlayout {
     margin-left: 10%;
     overflow: hidden;
 }
-
 .itemwidth{
     width:33%;
     float:left;
 }
-
 .titletext {
     color: #215357;
     font-weight: bold;
 }
-
 .whytextbox {
     width: 139px;
     margin-left: 50px;
 }
-
 .whytextboxlastitem {
     width: 155px;
     margin-left: 50px;
 }
-
 .whyimage{
     width:100px;
 }
@@ -81,7 +83,50 @@
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
 .dotext {
     width: 93%;
+}
+
+/* Best Seller */
+.bestseller {
+    background-color: #F5F5F5;
+    overflow: hidden;
+}
+.bestsellerimagewidth{
+    width: 50%;
+    float: left;
+}
+.bestsellertextwidth {
+    width: 36%;
+    margin-left: 7%;
+    margin-right: 7%;
+    float: left;
+}
+.bestlogo {
+    position: absolute;
+    width: 5%;
+    margin-left: 5%;
+}
+.bestimages {
+    position: center;
+    margin-top: 30px;
+    z-index: -1;
+}
+
+.bestsellertitle {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 66px
+}
+
+.bestsellertext {
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+.bestsellerbutton {
+    background-color: #215357;
+    color: white;
+    width: 40%;
+    padding: 10px;
 }

@@ -30,40 +30,11 @@ namespace HealthUp.Web.Controllers
             return View(productViewModelList);
         }
 
-        public IActionResult CreateProduct()
-        {
-            return View();
-        }
-
-        public IActionResult SendProduct(ProductViewModel productView)
-        {
-            var convertedData = service.ConvertViewToData(productView);
-            _data.Create(convertedData);
-
-            return RedirectToAction("Index", "Product");
-        }
-
-        public IActionResult Detail(Guid id)
+        public IActionResult ProductDetail(Guid id)
         {
             var findProduct = _data.Find(id);
             var viewProduct = service.ConvertDataToView(findProduct);
             return View(viewProduct);
-        }
-
-        public IActionResult Update(Guid id)
-        {
-            var findProduct = _data.Find(id);
-            var viewProduct = service.ConvertDataToView(findProduct);
-            return View(viewProduct);
-        }
-        [HttpPost]
-        [Route("Product/Update/{id?}")]
-        public IActionResult Update(ProductViewModel product)
-        {
-            var dataProduct = service.UpdateProductElement(product);
-            dataProduct.name = product.name;         
-            _data.Update(dataProduct);
-            return RedirectToAction("Index", "Product");
         }
 
         public IActionResult Delete(Guid id)

@@ -1,0 +1,14 @@
+﻿.productbanner {
+    background-image: url('../images/productpage/productbanner.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.producttitle {
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    padding: 10%;
+    font-size: 35px;
+}

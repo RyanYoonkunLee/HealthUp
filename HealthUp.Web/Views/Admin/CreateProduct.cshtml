@@ -1,11 +1,10 @@
-﻿@model HealthUp.ViewModel.ProductViewModel
+﻿@model HealthUp.ViewModel.ProductViewModel;
 @{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "CreateProduct";
 }
 
-<h1>Update</h1>
-
-@using (Html.BeginForm("Update", "Product", FormMethod.Post))
+<h1>CreateProduct</h1>
+@using (Html.BeginForm("SendProduct", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(m => m.name);
     @Html.TextBoxFor(m => m.name);
@@ -16,4 +15,5 @@
     @Html.LabelFor(m => m.size);
     @Html.TextBoxFor(m => m.size);
     <input type="submit" value="Submit" />
+
 }
