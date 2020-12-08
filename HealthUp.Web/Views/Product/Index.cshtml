@@ -9,8 +9,8 @@
 </div>
 
 @foreach(var item in Model){
-    
+<div>
     @item.number
-    @Html.ActionLink(item.name, "ProductDetail", "Product", new {id = item.id})
-    
+    @Html.ActionLink(item.name, "ProductDetail", "Product", new { id = item.id })
+</div>  
 }
