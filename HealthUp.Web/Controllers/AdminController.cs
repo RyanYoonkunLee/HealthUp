@@ -298,7 +298,7 @@ namespace HealthUp.Web.wwwroot
                 return View(bestSeller);
             }
         }
-
+        .....
         public IActionResult BestSellerDelete(Guid id)
         {
             _best.Delete(id);
