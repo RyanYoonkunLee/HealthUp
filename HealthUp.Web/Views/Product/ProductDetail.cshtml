@@ -1,16 +1,92 @@
 ﻿@model HealthUp.ViewModel.ProductViewModel
 @{
     ViewData["Title"] = "Detail";
+    <link href="~/css/Shared.css" rel="stylesheet" />
+    <link href="~/css/product.css" rel="stylesheet" />
 }
 
-<h1>Detail</h1>
+<div class="productdetailcolor">
+    <h5 class="productdetailcategory textfont">Products / <strong class="titlefont">@Model.Category[0]</strong></h5>
+    <div class="halfwidth productdetaillayout">
+        <div class="max-width">
+            <img id='featured' src=@ViewBag.Images[0]>
+            <div id="slide-wrapper">
+                <button class="arrow" id="slideLeft">&#10094;</button>
+                <div id="slider">
+                    @foreach (var item in ViewBag.Images)
+                    {
+                        if (item == ViewBag.Images[0])
+                        {
+                            <img class="productthumbnail active" src=@item>
+                        }
+                        else
+                        {
+                            <img class="productthumbnail" src=@item>
+                        }
+                    }
+                </div>
+                <button class="arrow" id="slideRight">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <div class="halfwidth productdetaillayout">
+        <p class="productdetailname brandcolor titlefont">@Model.Name</p>
+        <p class="productdetaildescription textfont">@Html.Raw(Model.Description)</p>
+    </div>
+</div>
 
-    @Html.LabelFor(m => m.name);
-    @Html.TextBoxFor(m => m.name);
-    @Html.LabelFor(m => m.description);
-    @Html.TextBoxFor(m => m.description);
-    @Html.LabelFor(m => m.benefits);
-    @Html.TextBoxFor(m => m.benefits);
-    @Html.LabelFor(m => m.size);
-    @Html.TextBoxFor(m => m.size);
+<div class="productdetailnav">
+    <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link width-30 float-left productdetailnavmenu titlefont active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">INGREDIENTS</a>
+        <a class="nav-link width-30 float-left productdetailnavmenu titlefont" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">BENEFITS & SIZE</a>
+        <a class="nav-link width-30 float-left productdetailnavmenu titlefont" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">DIRECTION OF USE</a>
+    </div>
+    <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <p class="titlefont tabcontentmargin">EACH CAPSULE CONTAINS</p>
+            <p class="textfont">@Html.Raw(@Model.Ingredient)</p>
+            <p class="titlefont tabcontentmargin">CONATINS NO ADDED</p>
+            <p class="textfont">@Model.ContainNoAdded</p>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <p class="titlefont tabcontentmargin">BENIFITS</p>
+            <p class="textfont">@Html.Raw(@Model.Benefits)</p>
+            <p class="titlefont tabcontentmargin">SIZE</p>
+            <p class="textfont">@Model.Size</p>
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <p class="titlefont tabcontentmargin">DIRECTION OF USE</p>
+            <p class="textfont">@Html.Raw(@Model.Dosage)</p>
+        </div>
+    </div>
+</div>
 
+
+
+<script type="text/javascript">
+    var thumbnails = document.getElementsByClassName('productthumbnail')
+
+    var activeImages = document.getElementsByClassName('active')
+
+    for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].addEventListener('mouseover', function () {
+            if (activeImages.length > 0) {
+                activeImages[0].classList.remove('active')
+            }
+
+            this.classList.add('active')
+            document.getElementById('featured').src = this.src
+        })
+    }
+
+    let buttonRight = document.getElementById('slideRight');
+    let buttonLeft = document.getElementById('slideLeft');
+
+    buttonLeft.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft -= 180
+    })
+
+    buttonRight.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft += 180
+    })
+</script>

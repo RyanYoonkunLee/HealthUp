@@ -1,0 +1,32 @@
+﻿@model List<HealthUp.DataModel.Article>
+@{
+    ViewData["Title"] = "ArticleList";
+    <link href="~/css/admin.css" rel="stylesheet" />
+}
+
+<h1 class="titlefont"> ArticleList</h1>
+@Html.ActionLink("Create", "ArticleCreate", "Admin", new { }, new { @class = "btn createbutton float-right btn-lg" })
+
+<table class="table">
+    <thead>
+        <tr>
+            <td scope="col">#</td>
+            <td scope="col">Name</td>
+            <td scope="col">Functions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < @Model.Count; i++)
+        {
+        <tr>
+            <td scope="row">@(i + 1)</td>
+            <td>@Model[i].Title</td>
+            <td>
+                @Html.ActionLink("Edit", "ArticleUpdate", "Admin", new { id = @Model[i].Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "ArticleDelete", "Admin", new { id = @Model[i].Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>

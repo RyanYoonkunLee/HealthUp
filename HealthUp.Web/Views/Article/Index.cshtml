@@ -1,7 +1,25 @@
-﻿
+﻿@model List<HealthUp.ViewModel.ArticleViewModel>
 @{
     ViewData["Title"] = "Index";
+    <link href="~/css/article.css" rel="stylesheet" />
 }
 
-<h1>Index</h1>
-
+    <div class="articlebanner">
+        <p class="articletitle">HEALTH ARTICLES</p>
+    </div>
+    <div class="articlelist">
+        @foreach(var item in Model)
+        {
+            <div class="articleListlayout shadow mt-5 mb-5 bg-white rounded">
+                <img class="max-width" src=@item.ThumbnailImage />
+                <div class="articleitemlayout">
+                    <p class="titlefont brandcolor articlelisttitle">@item.Title</p>
+                    <p class="textfont articlelistbody">@item.Body</p>
+                </div>
+                <div class = "articlebutton">
+                    @Html.ActionLink("READ MORE", "ArticleDetail", "Article", new { id = @item.Id }, new { @class= "whitetext" })
+                </div>
+            </div>
+        }
+    </div>
+    

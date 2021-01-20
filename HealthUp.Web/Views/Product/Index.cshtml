@@ -2,16 +2,55 @@
 @{
     ViewData["Title"] = "Index";
     <link href="~/css/product.css" rel="stylesheet" />
+    <link href="~/css/Shared.css" rel="stylesheet" />
 }
 
 <div class="productbanner">
     <p class="producttitle">OUR PRODUCTS ARE MADE TO ENABLE PEOPLE TO LIVE HEALTHY LIFE</p>
 </div>
+<div class="sortbylayout">
+    <p class="brandcolor sortbytitle">SORT BY</p>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item sortbybutton">
+            <a class="nav-link active sortbybuttontext" id="pills-home-tab" data-toggle="pill" href="#pills-productrange" role="tab" aria-controls="pills-home" aria-selected="true">PRODUCT RANGE</a>
+        </li>
+        <li class="nav-item sortbybutton">
+            <a class="nav-link sortbybuttontext" id="pills-profile-tab" data-toggle="pill" href="#pills-function" role="tab" aria-controls="pills-profile" aria-selected="false">FUNCTION</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active sortbytextbox" id="pills-productrange" role="tabpanel" aria-labelledby="pills-home-tab">
+            @foreach (var category in ViewBag.Categories)
+            {
+                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-searchcolumn="Category" asp-route-sort=@category.Name><p class="sortbytext">@category.Name</p></a>
+            }
+        </div>
+        <div class="tab-pane fade sortbytextbox" id="pills-function" role="tabpanel" aria-labelledby="pills-profile-tab">
+            @foreach (var function in ViewBag.Functions)
+            {
+                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-searchcolumn="Function" asp-route-sort=@function.Name><p class="sortbytext">@function.Name</p></a>
+            }
+        </div>
+    </div>
+</div>
 
-@foreach(var item in Model){
-<div>
-    
-    @Html.ActionLink(item.name, "ProductDetail", "Product", new { id = item.id })
-    <button>@item.number</button>
-</div>  
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <div class="productlayout">
+            <a class="notextdecoration" href="@Url.Action("ProductDetail", "Product", new { id = @item.Id })">
+                <img class="maxwidth" src=@item.ThumbnailImage />
+                <div class="productbutton">
+                    @item.Name
+                </div>
+            </a>
+        </div>
+    }
+}
+else
+{
+    <div class="productlayout">
+        <p>No Result Found.</p>
+    </div>
 }

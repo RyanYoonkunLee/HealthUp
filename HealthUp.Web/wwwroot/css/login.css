@@ -1,0 +1,17 @@
+﻿.loginlayout{
+    width: 30%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.loginbutton {
+    background-color: #215357;
+    width: 25%;
+    margin-right: 33%;
+    margin-left: 33%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}

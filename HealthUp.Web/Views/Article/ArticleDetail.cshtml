@@ -1,0 +1,27 @@
+﻿@model HealthUp.ViewModel.ArticleDetailViewModel
+@{
+    ViewData["Title"] = "ArticleDetail";
+    <link href="~/css/article.css" rel="stylesheet" />
+}
+
+<img src=@Model.BannerImage />
+<div class="articlelayout">
+    <p class="titlefont brandcolor articledetailtitle">@Model.Title</p>
+    <div class="textfont articlebody">
+        @Html.Raw(Model.Body)
+    </div>
+</div>
+<div class="relatelayout overflow-hidden">
+    <p class="relatetitle titlefont brandcolor">Relate Product</p>
+    @foreach (var item in ViewBag.RelatedProducts)
+    {
+        <a href = "@Url.Action("ProductDetail", "Product", new { id = @item.Id })">
+            <div class="relateboxlayout float-left">
+                <div class="relateimagelayout">
+                    <img class="relateimage" src="@item.ThumbnailImage" />
+                </div>
+                <p class="relatetext brandcolor titlefont">@item.Name</p>
+            </div>
+        </a>
+    }
+</div>

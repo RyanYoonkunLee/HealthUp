@@ -1,0 +1,35 @@
+﻿@model List<HealthUp.ViewModel.ProductViewModel>
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/css/admin.css" rel="stylesheet" />
+}
+
+<h1 class="titlefont">Product List</h1>
+@Html.ActionLink("Create", "ProductCreate", "Admin", new { }, new { @class = "btn createbutton float-right btn-lg" })
+
+<table class="table">
+    <thead>
+        <tr>
+            <td scope="col">#</td>
+            <td scope="col">Name</td>
+            <td scope="col">Category Expose</td>
+            <td scopr="col">Product Expose</td>
+            <td scope="col">Functions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < @Model.Count; i++)
+        {
+        <tr>
+            <td scope="row">@(i + 1)</td>
+            <td scope="row">@Model[i].Name</td>
+            <td scope="col">@Model[i].CategoryExpose</td>
+            <td scopr="col">@Model[i].ProductExpose</td>
+            <td scope="row">
+                @Html.ActionLink("Edit", "ProductUpdate", "Admin", new { id = @Model[i].Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", "Admin", new { id = @Model[i].Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

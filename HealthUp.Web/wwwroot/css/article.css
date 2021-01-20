@@ -1,0 +1,99 @@
+﻿.articlebanner {
+    background-image: url('../images/article/Health-Article-top-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+}
+
+.articlelist {
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+.articletitle {
+    color: white;
+    font-weight: bold;
+    padding: 14%;
+    font-size: 35px;
+    margin-bottom: 0px !important;
+}
+
+.articleListlayout{
+    width: 30%;
+    margin-left: 3%;
+    float: left;
+}
+
+.articleitemlayout {
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+    margin-left: 5%;
+    padding: 15px;
+}
+
+.articlelisttitle{
+    font-size: 25px;
+}
+
+.articlelistbody{
+    font-size: 15px;
+}
+
+.articlebutton {
+    background-color: #215357;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/*Article Detail Page*/
+.articlelayout{
+    padding: 5%;
+}
+.articledetailtitle {
+    font-size: 40px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.articlebody {
+    font-size: 20px;
+}
+.relatelayout {
+    background-color: #F5F5F5;
+}
+.relatetitle {
+    font-size: 30px;
+    margin: 4%;
+}
+.relateimagelayout {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.relateimage{
+    width: 100%;
+    background-color: white;
+}
+.relatetext {
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.relateboxlayout{
+    width: 25%;
+}
+
+@media (max-width: 787px){
+    .articlebanner {
+        background-image: url('../images/article/M-Health-Article-top-banner.jpg');
+    }
+}

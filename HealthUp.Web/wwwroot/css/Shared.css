@@ -3,11 +3,50 @@
     margin-right: 5%;
 }
 
+.navfontsize{
+    font-size: 20px;
+}
+
+.searchbar {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #215357;
+}
+
+.searchbox{
+    width: 88% !important;
+}
+
+.whitetext {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.width-30{
+    width: 30%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.halfwidth{
+    width:50%;
+}
+
+.websitelayout{
+    width: 90% !important;
+}
+
 /* Navbar */
 .max-width {
-    width: 100%;
-    text-align: center;
-    color: white;
+    width: 100% !important;
+    text-align: center !important;
+    color: white !important;
 }
 
 .logo {
@@ -61,4 +100,85 @@
 .footermenulink{
     color: white;
     text-decoration: none;
+}
+
+.whitetext{
+    color: white !important;
+}
+
+.maxwidth {
+    width: 100%;
+    object-fit: cover;
+    padding: 5%;
+}
+
+.brandcolor {
+    color: #215357;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+.dropdown-menu{
+    display : none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+/*Font*/
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(../Font/Gotham-Bold.otf);
+}
+
+@font-face {
+    font-family: Gotham-text;
+    src: url(../Font/GothamLight.ttf);
+}
+
+.titlefont {
+    font-family: Gotham-Bold;
+}
+
+.textfont {
+    font-family: Gotham-text;
+}
+
+.form-control{
+    height: auto !important;
+}
+
+@media (min-width: 768px) and (max-width: 1121px) {
+    .searchbox {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .websitelayout {
+        width: 100% !important;
+    }
+
+    .bodymargin {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .searchbar {
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 1%;
+    }
+
+    .searchbox {
+        width: 70% !important;
+        margin-left: 4%;
+    }
+
+    .searchbutton {
+        width: 20%;
+        margin-left: 3% !important;
+    }
 }

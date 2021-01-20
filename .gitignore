@@ -1,4 +1,8 @@
 Migrations/
 DataContext/
+sql/
+DataModel/
+ServiceLayer/
+ViewModel/
 
 .vs

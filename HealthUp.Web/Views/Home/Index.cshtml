@@ -1,67 +1,295 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
     <link rel="stylesheet" href="~/css/mainpage.css" />
+    <link rel="stylesheet" href="~/css/Shared.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #mySlides {
+            display: none;
+        }
+    </style>
 }
 
-
-    <div class="mainbanner" id="mainbanner">
-        <div class="mainbanertext">
-            <h3>DO BETTER BY KNOWING</h3>
-            <h3>OUR PEOPLE BETTER</h3>
-        </div>
-        <a class="btn btn-outline-secondary buttoncolor" asp-area="" asp-controller="Product" asp-action="Index">OUR PRODUCTS</a>
+<div class="mainbanner" id="mainbanner">
+    <div class="mainbanertext">
+        <h2 class="titlefont">DO BETTER BY KNOWING</h2>
+        <h2 class="titlefont">OUR PEOPLE BETTER</h2>
     </div>
+    <a class="btn btn-outline-secondary buttoncolor" asp-area="" asp-controller="Product" asp-action="Index">OUR PRODUCTS</a>
+</div>
 
-    <div class="bestseller">
+@foreach (var item in ViewBag.BestSellers)
+{
+    <div class="bestseller mySlides" style="width:100%">
         <div>
             <div class="bestsellerimagewidth">
                 <img class="bestlogo" src="~/images/mainpage/bestseller/icon.png" />
-                <img class="bestimgage maxwidth" src="~/images/mainpage/bestseller/best1.png" />
+                <img class="bestimgage maxwidth titlefont" src=@item.ThumbnailImage />
             </div>
             <div class="bestsellertextwidth">
-                <p class="titlecolor bestsellertitle">GREEN MUSSLE 7500</p>
-                <p class="textcolor bestsellertext">Green Mussel 7500 is a very good health supplement to relieve joint pain. It helps reduce arthritis symptom and increasse joint mobility.</p>
-                <button class="titlecolor bestsellerbutton">FIND OUT MORE</button>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="marginbottom">
-        <h3 class="whylayout">WHY CHOOSE US?</h3>
-        <div class="itemlayout">
-            <div class="itemwidth">
-                <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon1.png" />
-                <div class="float-left whytextbox">
-                    <p class="titletext">MADE IN NZ</p>
-                    <p>All our products are produly made in New Zealand.</p>
+                <p class="titlecolor bestsellertitle titlefont">@item.Name</p>
+                <p class="textcolor bestsellertext textfont">@item.Body</p>
+                <div class="bestsellerbutton">
+                    <a asp-area="" asp-action="SearchProduct" asp-controller="Product" asp-route-name="@item.Name"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
                 </div>
             </div>
-            <div class="itemwidth">
-                <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon2.png" />
-                <div class="float-left whytextbox">
-                    <p class="titletext">LAB TESTED</p>
-                    <p>All our products are lab tested for the best quality.</p>
-                </div>               
-            </div>
-            <div class="itemwidth">
-                <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon3.png" />
-                <div class="float-left whytextboxlastitem">
-                    <p class="titletext">INNOVATION</p>
-                    <p>Develop unique and high quality formulas with premium quality ingredients</p>
-                </div>               
-            </div>
-        </div>        
-    </div>
-
-    <div class="dolayout">
-        <div class="doimgwidth">
-            <img class="maxwidth" src="~/images/mainpage/bottombanner/bottombanner.png" />
-        </div>
-        <div class="dotextbox">
-            <p class="dotitle">DO BETTER BY KNOWNG OUT PEOPLE BETTER</p>
-            <p class="dotext">HealthUP was created in New Zealand with the aim of providing good quality health supplements to enable people to live healthy.</p>
-            <p class="dotext">Our emphasis is on using pure and natural ingredients to make health supplements of consistent quality.</p>
         </div>
     </div>
+}
+<div class="newproductlayout">
+    @foreach (var newproduct in ViewBag.NewProducts)
+    {
+        <div class="newproduct" style="width:100%">
+            <div>
+                <div class="bestsellerimagewidth">
+                    <img class="bestlogo" src="~/images/mainpage/newproduct/icon.png" />
+                    <img class="bestimgage maxwidth" src=@newproduct.ThumbnailImage />
+                </div>
+                <div class="bestsellertextwidth">
+                    <p class="bestsellertitle whitebannertext titlefont">@newproduct.Name</p>
+                    <p class="bestsellertext whitebannertext textfont">@newproduct.Body</p>
+                    <div class="bestsellerbutton">
+                        <a asp-area="" asp-action="SearchProduct" asp-controller="Product" asp-route-name="@newproduct.Name"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+</div>
 
+<div class="overflow-hidden">
+    <p class="brandcolor productrangetitle titlefont">OUR PRODUCT RANGE</p>
+    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+        <div class="MultiCarousel-inner">
+            @foreach (var range in ViewBag.ProductRanges)
+            {
+                <a href="@Url.Action("Index", "Product", new { sort = range.Name, searchcolumn = "Category" })">
+                    
+                    <div class="item">
+                        <div class="pad15">
+                            <img class="max-width" src=@range.ThumbnailImage />
+                            <button class="productrangebutton titlefont">@range.Name</button>
+                        </div>
+                    </div>
+                                
+                </a>
+            }
+
+        </div>
+        <a class="leftLst">&#10094;</a>
+        <a class="rightLst">&#10095;</a>
+    </div>
+</div>
+
+<div class="marginbottom">
+    <h3 class="whylayout titlefont">WHY CHOOSE US?</h3>
+    <div class="itemlayout">
+        <div class="itemwidth">
+            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon1.png" />
+            <div class="float-left whytextbox">
+                <p class="titletext titlefont">MADE IN NZ</p>
+                <p class="textfont">All our products are produly made in New Zealand.</p>
+            </div>
+        </div>
+        <div class="itemwidth">
+            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon2.png" />
+            <div class="float-left whytextbox">
+                <p class="titletext titlefont">LAB TESTED</p>
+                <p class="textfont">All our products are lab tested for the best quality.</p>
+            </div>
+        </div>
+        <div class="itemwidth">
+            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon3.png" />
+            <div class="float-left whytextboxlastitem">
+                <p class="titletext titlefont">INNOVATION</p>
+                <p class="textfont">Develop unique and high quality formulas with premium quality ingredients</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dolayout">
+    <div class="doimgwidth">
+        <img class="max-width" src="~/images/mainpage/bottombanner/bottombanner.png" />
+    </div>
+    <div class="dotextbox">
+        <p class="dotitle titlefont">DO BETTER BY KNOWNG OUT PEOPLE BETTER</p>
+        <p class="dotext textfont">HealthUP was created in New Zealand with the aim of providing good quality health supplements to enable people to live healthy.</p>
+        <p class="dotext textfont">Our emphasis is on using pure and natural ingredients to make health supplements of consistent quality.</p>
+    </div>
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.opacity = '0';
+            slides[i].style.display = 'none';
+            slides[i].style.transition = '0.5s linear';
+        }
+        slideIndex++;
+
+
+        slides[slideIndex - 1].style.opacity = '1';
+        
+        slides[slideIndex - 1].style.transition = '0.5s linear 0.5s';
+        slides[slideIndex - 1].style.display = 'block';
+
+
+        setTimeout(showSlides, 5000);
+        if (slideIndex == slides.length) {
+            slideIndex = 0;
+        }
+    }
+</script>
+<script>
+    var slideIndex1 = 1;
+    showSlides1(slideIndex1);
+
+    function plusSlides(n) {
+        showSlides1(slideIndex1 += n);
+    }
+
+    function currentSlide(n) {
+        showSlides1(slideIndex1 = n);
+    }
+
+    function showSlides1(n) {
+        var i;
+        var slides1 = document.getElementsByClassName("newproduct");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides1.length) { slideIndex1 = 1 }
+        if (n < 1) { slideIndex1 = slides1.length }
+        for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");   
+            dots[i].style.backgroundColor = "#bbb";            
+        }
+        slides1[slideIndex1 - 1].style.display = "block";
+        dots[slideIndex1 - 1].className += " active";
+        dots[slideIndex1 - 1].style.backgroundColor = "#fff";
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 877) {
+                incno = 3;
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 500) {
+                incno = 2;
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+    
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+    });
+
+</script>

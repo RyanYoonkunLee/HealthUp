@@ -3,17 +3,115 @@
     ViewData["Title"] = "Update";
 }
 
-<h1>Update</h1>
+<h1 class="titlefont mb-5">Product Update</h1>
 
 @using (Html.BeginForm("ProductUpdate", "Admin", FormMethod.Post))
 {
-    @Html.LabelFor(m => m.name);
-    @Html.TextBoxFor(m => m.name);
-    @Html.LabelFor(m => m.description);
-    @Html.TextBoxFor(m => m.description);
-    @Html.LabelFor(m => m.benefits);
-    @Html.TextBoxFor(m => m.benefits);
-    @Html.LabelFor(m => m.size);
-    @Html.TextBoxFor(m => m.size);
-    <input type="submit" value="Submit" />
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+</div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ThumbnailImage)
+        @Html.TextAreaFor(m => m.ThumbnailImage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Benefits)
+        @Html.TextAreaFor(m => m.Benefits, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Dosage)
+        @Html.TextBoxFor(m => m.Dosage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ingredient)
+        @Html.TextAreaFor(m => m.Ingredient, new { @class = "form-control", rows = "3" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Size)
+        @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CategoryExpose)
+        @Html.TextBoxFor(m => m.CategoryExpose)
+        @Html.ValidationMessageFor(m => m.CategoryExpose, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductExpose)
+        @Html.TextBoxFor(m => m.ProductExpose)
+        @Html.ValidationMessageFor(m => m.ProductExpose, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group overflow-hidden">
+        @Html.LabelFor(m => m.Function)
+        <div class="form-control overflow-hidden">
+            @foreach (var item in ViewBag.Functions)
+            {
+                if (item.Selected == true)
+                {
+                    <div class="m-3 width-30 float-left">
+                        <input class="form-check-input" checked type="checkbox" value="@item.Name" id="@item.Name" name="Function">
+                        <label class="form-check-label" for="@item.Name">@item.Name</label>
+                    </div>
+                }
+                else
+                {
+                    <div class="m-3 width-30 float-left">
+                        <input class="form-check-input" type="checkbox" value="@item.Name" id="@item.Name" name="Function">
+                        <label class="form-check-label" for="@item.Name">@item.Name</label>
+                    </div>
+                }
+            }
+        </div>
+        @Html.ValidationMessageFor(m => m.Function, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group overflow-hidden">
+        @Html.LabelFor(m => m.Category)
+        <div class="form-control overflow-hidden">
+            @foreach (var item in ViewBag.Categories)
+            {
+                if (item.Selected == true)
+                {
+                    <div class="m-3 width-30 float-left">
+                        <input class="form-check-input" checked type="checkbox" value="@item.Name" id="@item.Name" name="Category">
+                        <label class="form-check-label" for="@item.Name">@item.Name</label>
+                    </div>
+                }
+                else
+                {
+                    <div class="m-3 width-30 float-left">
+                        <input class="form-check-input" type="checkbox" value="@item.Name" id="@item.Name" name="Category">
+                        <label class="form-check-label" for="@item.Name">@item.Name</label>
+                    </div>
+                }
+            }
+        </div>
+        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductImages)
+        @Html.TextAreaFor(m => m.ProductImages, new { @class = "form-control", rows = "3" })
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-5">Submit</button>
 }
+
+<script>
+    var category = document.getElementsByName("name").values;
+    var selected = @Model.Category;
+    for (var i = 0; i < category.length; i++)
+    {
+        for (var j = 0; j < selected.length; j++) {
+            if (selected[i] == category[j]) {
+                category[j].classList.add("active");
+            }
+        }
+    }
+</script>

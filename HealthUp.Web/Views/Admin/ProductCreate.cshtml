@@ -1,0 +1,85 @@
+﻿@model HealthUp.ViewModel.ProductViewModel;
+@{
+    ViewData["Title"] = "ProductCreate";
+}
+
+<h1 class="titlefont mb-5">Create Product</h1>
+@using (Html.BeginForm("ProductCreate", "Admin", FormMethod.Post))
+{
+
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+</div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ThumbnailImage)
+        @Html.TextBoxFor(m => m.ThumbnailImage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Benefits)
+        @Html.TextAreaFor(m => m.Benefits, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Dosage)
+        @Html.TextBoxFor(m => m.Dosage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ingredient)
+        @Html.TextAreaFor(m => m.Ingredient, new { @class = "form-control", rows = "3" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Size)
+        @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CategoryExpose)
+        @Html.TextBoxFor(m => m.CategoryExpose)
+        @Html.ValidationMessageFor(m => m.CategoryExpose, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductExpose)
+        @Html.TextBoxFor(m => m.ProductExpose)
+        @Html.ValidationMessageFor(m => m.ProductExpose, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group overflow-hidden">
+        @Html.LabelFor(m => m.Function)
+        <div class="form-control overflow-hidden">
+            @foreach (var item in ViewBag.Functions)
+            {
+                <div class="m-3 width-30 float-left">
+                    <input class="form-check-input" type="checkbox" value="@item.Name" id="@item.Name" name="Function">
+                    <label class="form-check-label" for="@item.Name">@item.Name</label>
+                </div>
+            }
+        </div>
+        @Html.ValidationMessageFor(m => m.Function, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group overflow-hidden">
+        @Html.LabelFor(m => m.Category)
+        <div class="form-control overflow-hidden">
+            @foreach (var item in ViewBag.Categories)
+            {
+                <div class="m-3 width-30 float-left">
+                    <input class="form-check-input" type="checkbox" value="@item.Name" id="@item.Name" name="Category">
+                    <label class="form-check-label" for="@item.Name">@item.Name</label>
+                </div>
+            }
+        </div>
+        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductImages)
+        @Html.TextAreaFor(m => m.ProductImages, new { @class = "form-control", rows = "3" })
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-5">Submit</button>
+
+}

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/css/Shared.css" rel="stylesheet" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+}
+
+<h1 class="max-width adminbanner">Admin Page</h1>
+<h1 class="brandcolor titlefont text-center">Welcome Health Up Administrator</h1>
+<div class="adminbuttonlayout">
+    <a class="adminnavbutton" asp-area="" asp-controller="Admin" asp-action="ProductList"><img class="max-width" src="~/images/admin/Admin-page-button-products.jpg" /></a>
+    <a class="adminnavbutton" asp-area="" asp-controller="Admin" asp-action="ArticleList"><img class="max-width" src="~/images/admin/Admin-page-button-article.jpg" /></a>
+    <a class="adminnavbutton" asp-area="" asp-controller="Admin" asp-action="NewProductList"><img class="max-width" src="~/images/admin/Admin-page-button-new.jpg" /></a>
+    <a class="adminnavbutton" asp-area="" asp-controller="Admin" asp-action="BestSellerList"><img class="max-width" src="~/images/admin/Admin-page-button-best.jpg" /></a>
+</div>
+
+

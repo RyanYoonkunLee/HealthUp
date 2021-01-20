@@ -1,7 +1,110 @@
-﻿
+﻿@model HealthUp.DataModel.Email
 @{
     ViewData["Title"] = "Index";
+    <link rel="stylesheet" href="~/css/story.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+    <script>
+        (function () {
+            var setting = { "height": 407, "width": 803, "zoom": 17, "queryString": "129 Onewa Road, Northcote, Auckland, New Zealand", "place_id": "ChIJ930NWFk4DW0RV8y2PI195cU", "satellite": false, "centerCoord": [-36.810318061884445, 174.73613849999998], "cid": "0xc5e57d8d3cb6cc57", "lang": "en", "cityUrl": "/nz/auckland", "cityAnchorText": "Map of Auckland, North Island, New Zealand", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "326159" };
+            var d = document;
+            var s = d.createElement('script');
+            s.src = 'https://1map.com/js/script-for-user.js?embed_id=326159';
+            s.async = true;
+            s.onload = function (e) {
+                window.OneMap.initMap(setting)
+            };
+            var to = d.getElementsByTagName('script')[0];
+            to.parentNode.insertBefore(s, to);
+        })();
+    </script>
 }
 
-<h1>Index</h1>
+<div class="storybanner">
+    <p class="storybannertext">OUR STORY</p>
+</div>
 
+<div>
+    <div class="width-30 storylefttextpadding float-left">
+        <p class="brandcolor titlefont storylefttext">HealthUP was created in New Zealand with the aim of providing good quality health supplements to enable people to live healthy.</p>
+    </div>
+    <div class="width-70 storyrighttextpadding float-left">
+        <div>
+            <p class="titlefont brandcolor storytitle">OUR VISION</p>
+            <p class="textfont storybody">HealthUP is a New Zealand health product company which produces a wide range of products designed to boost natural immunity and to supplement bodily nutrients using good quality New Zealand and import ingredients. We produce products in a range of convenient packs, including colostrum, green mussel, propolis, bilberry plus vitamin C, omega3, royal jelly, manuka honey.</p>
+        </div>
+        <div>
+            <p class="titlefont brandcolor storytitle">OUR MISSON</p>
+            <p class="textfont storybody">We have been operating successfully since 2009, selling our products to a wide range of specialist health food outlets, both throughout New Zealand and overseas. We give priority to integrity and reliability as well as innovation to ensure that our customers can benefit from the consist quality of our products as well the latest knowledge about healthcare products.</p>
+        </div>
+    </div>
+</div>
+
+<img class="max-width" src="~/images/ourstory/Our-Story-middle.jpg" />
+
+<div>
+    <div class="halfwidth float-left storycontact paddingleft-10">
+        <div class="contactbox">
+            <p class="titlefont brandcolor contacttitle">CONTACT US</p>
+            <p><strong>Phone: </strong>+64 9 442 5992</p>
+            <p><strong>Email: </strong>healthup777@gmail.com</p>
+            <p><strong>Address: </strong>HealthUP Corporation Inc,</p>
+            <p>129 Onewa Road, Northcote, Auckland</p>
+        </div>
+        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+            <a href="https://1map.com/map-embed">1 Map</a>
+        </div>
+    </div>
+    <div class="halfwidth float-left storycontact">
+        <div class="contactbox">
+            <p class="mb-2">For any questions or you’d like to know more about what we do simply reach out to us at <strong>info@healthup.co.nz</strong> or fill out the form below. </p>
+            <p>Our team will get back to you as soon as possible.</p>
+        </div>
+
+        @Html.LabelFor(m => m.Name, new { @class = "emailbox font-weight-bold" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "emailbox", id = "customername" })
+        @Html.LabelFor(m => m.EmailAddress, new { @class = "emailbox font-weight-bold" })
+        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "emailbox", id = "email" })
+        @Html.LabelFor(m => m.Message, new { @class = "emailbox font-weight-bold" })
+        @Html.TextAreaFor(m => m.Message, new { @class = "emailbox emailtextarea", id = "message" })
+        <button class="sendbutton" onclick="SendEmail()">SEND</button>
+        <div class="result" id="result">
+            <p class="alert-success" id="success1"></p>
+            <p class="alert-danger" id="errormessage"></p>
+        </div>
+    </div>
+</div>
+
+<img class="max-width" src="~/images/ourstory/Our-Story_bottom.jpg" />
+
+<script src="js/main.js"></script>
+<script>
+    function SendEmail(){
+      $.ajax(
+      {
+        type: "POST",
+        url: '@Url.Action("SendEmail", "Story")',
+        data: {
+          Name: $("#customername").val(),
+          Email: $("#email").val(),
+          Message: $("#message").val()
+        },
+        error: function (result) {
+            document.getElementById("errormessage").innerHTML = result;
+        },
+        success: function (result) {
+            if (result == "Your Email Sent Successfully!") {
+                document.getElementById("success1").innerHTML = result;
+                document.getElementById("errormessage").innerHTML = "";
+                $("#customername").val("");
+                $("#email").val("");
+                $("#message").val("");
+            }
+            else {
+                document.getElementById("errormessage").innerHTML = result;
+                document.getElementById("success1").innerHTML = "";
+            }                       
+        }
+      });
+    }
+</script>
