@@ -332,5 +332,5 @@ C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcorea
 C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Admin\BestSellerCreate.cshtml.g.cs
 C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Admin\BestSellerList.cshtml.g.cs
 C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Admin\BestSellerUpdate.cshtml.g.cs
-C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AdminIndex.cshtml.g.cs
 C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\LogIn.cshtml.g.cs
+C:\Users\Yoonkun Lee\Desktop\New Guinea\HealthUp\HealthUp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs

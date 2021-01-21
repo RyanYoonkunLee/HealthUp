@@ -40,16 +40,13 @@ namespace HealthUp.Web.wwwroot
             articleService = new ArticleService();
         }
 
-        public IActionResult Index()
-        {
-            return RedirectToAction("LogIn", "Account");
-        }
 
-        public IActionResult AdminIndex()
+        [Authorize(Roles = "Admin")]
+        public IActionResult Index()
         {
             return View();
         }
-
+        [Authorize(Roles = "Admin")]
         #region Product
         public IActionResult ProductList()
         {
@@ -57,7 +54,7 @@ namespace HealthUp.Web.wwwroot
             var productViewModelList = service.ConvertDataListToView(productList);
             return View(productViewModelList);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ProductCreate()
         {
             ViewBag.Functions = _data.GetFunctions();
@@ -81,7 +78,7 @@ namespace HealthUp.Web.wwwroot
                 return View(productView);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ProductUpdate(Guid id)
         {
             var findProduct = _data.Find(id);
@@ -114,7 +111,7 @@ namespace HealthUp.Web.wwwroot
                 return View(product);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Guid id)
         {
             _data.Delete(id);
@@ -124,13 +121,14 @@ namespace HealthUp.Web.wwwroot
         #endregion
 
         #region Article
+        [Authorize(Roles = "Admin")]
         public IActionResult ArticleList()
         {
             var articles = _article.GetArticles();
 
             return View(articles);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ArticleCreate()
         {
             ViewBag.ProductList = _data.GetProducts();
@@ -155,7 +153,7 @@ namespace HealthUp.Web.wwwroot
                 return View(article);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ArticleUpdate(Guid id)
         {
             var article = _article.FindById(id);
@@ -191,7 +189,7 @@ namespace HealthUp.Web.wwwroot
                 return View(article);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ArticleDelete(Guid id)
         {
             _article.Delete(id);
@@ -201,13 +199,14 @@ namespace HealthUp.Web.wwwroot
         #endregion
 
         #region NewProduct
+        [Authorize(Roles = "Admin")]
         public IActionResult NewProductList()
         {
             var newProducts = _new.GetNewProduct();
 
             return View(newProducts);
         }
-        
+        [Authorize(Roles = "Admin")]
         public IActionResult NewProductCreate()
         {
             return View();
@@ -228,7 +227,7 @@ namespace HealthUp.Web.wwwroot
                 return View(newProduct);
             }
         }
-        
+        [Authorize(Roles = "Admin")]
         public IActionResult NewProductUpdate(Guid id)
         {
             var newProduct = _new.FindById(id);
@@ -247,7 +246,7 @@ namespace HealthUp.Web.wwwroot
                 return View(newProduct);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult NewProductDelete(Guid id)
         {
             _new.Delete(id);
@@ -256,12 +255,13 @@ namespace HealthUp.Web.wwwroot
         }
         #endregion
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult BestSellerList()
         {
             var bestProducts = _best.GetBestSellers();
             return View(bestProducts);
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult BestSellerCreate()
         {
             return View();
@@ -280,6 +280,7 @@ namespace HealthUp.Web.wwwroot
                 return View(bestSeller);
             }
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult BestSellerUpdate(Guid id)
         {
             var best = _best.FindById(id);
@@ -298,7 +299,7 @@ namespace HealthUp.Web.wwwroot
                 return View(bestSeller);
             }
         }
-        .....
+        [Authorize(Roles = "Admin")]
         public IActionResult BestSellerDelete(Guid id)
         {
             _best.Delete(id);

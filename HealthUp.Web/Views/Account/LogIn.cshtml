@@ -3,16 +3,17 @@
     ViewData["Title"] = "LogIn";
     <link href="~/css/login.css" rel="stylesheet" />
 }
-
     <div class="loginlayout">
-        <h1 class="text-center font-weight-bold">Admin Page Log In</h1>
-        @using (Html.BeginForm("ValidationCheck", "Account", FormMethod.Post))
-        {
-            @Html.LabelFor(m => m.Id, new { @class = "websitelayout font-weight-bold"})
-            @Html.TextBoxFor(m => m.Id, new { @class = "websitelayout" })
-            @Html.LabelFor(m => m.Password, new { @class = "websitelayout font-weight-bold" })
-            @Html.TextBoxFor(m => m.Password, new { @class = "websitelayout" })
-            <button class="loginbutton">Log In</button>
-        }
+        <div class="loginform">
+            <h1 class="text-center font-weight-bold mt-lg-5 mb-lg-5">Admin Page Log In</h1>
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.LabelFor(m => m.Id, new { @class = "websitelayout font-weight-bold" })
+                @Html.TextBoxFor(m => m.Id, new { @class = "websitelayout mb-4" })
+                @Html.LabelFor(m => m.Password, new { @class = "websitelayout font-weight-bold" })
+                @Html.PasswordFor(m => m.Password, new { @class = "websitelayout mb-4" })
+                <button class="loginbutton">Log In</button>
+            }
+        </div>
     </div>
 
