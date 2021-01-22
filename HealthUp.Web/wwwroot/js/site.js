@@ -1,4 +1,27 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿<script type="text/javascript">
+    var thumbnails = document.getElementsByClassName('productthumbnail')
 
-// Write your JavaScript code.
+    var activeImages = document.getElementsByClassName('active')
+
+    for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].addEventListener('mouseover', function () {
+            if (activeImages.length > 0) {
+                activeImages[0].classList.remove('active')
+            }
+
+            this.classList.add('active')
+            document.getElementById('featured').src = this.src
+        })
+    }
+
+    let buttonRight = document.getElementById('slideRight');
+    let buttonLeft = document.getElementById('slideLeft');
+
+    buttonLeft.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft -= 180
+    })
+
+    buttonRight.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft += 180
+    })
+</script>
