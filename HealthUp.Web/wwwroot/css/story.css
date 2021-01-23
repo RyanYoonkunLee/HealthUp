@@ -88,3 +88,52 @@
 .emailtextarea{
     height: 200px;
 }
+
+.middle2{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .storybanner {
+        background-image: url('../images/ourstory/M-Our-Story_top-banner-new.jpg');
+    }
+
+    .storybannertext {
+        padding-top: 35%;
+        padding-bottom: 35%;
+    }
+    
+    .width-30 {
+        width: 100%;
+    }
+
+    .width-70 {
+        width: 100%;
+    }
+
+    .storytitle {
+        text-align: center;
+    }
+
+    .halfwidth {
+        width: 100%;
+    }
+
+    .emailbox {
+        font-size: 17px;
+    }
+
+    .storybody {
+        font-size: 16px;
+    }
+    .alert-danger {
+        font-size: 15px;
+    }
+
+    .middle1 {
+        display: none;
+    }
+    .middle2 {
+        display: block;
+    }
+}
