@@ -7,6 +7,7 @@
 
 <div class="productdetailcolor">
     <h5 class="productdetailcategory textfont">Products / <strong class="titlefont">@Model.Category[0]</strong></h5>
+    <p class="productdetailname brandcolor titlefont name1">@Model.Name</p>
     <div class="halfwidth productdetaillayout">
         <div class="max-width">
             <img id='featured' src=@ViewBag.Images[0]>
@@ -30,33 +31,33 @@
         </div>
     </div>
     <div class="halfwidth productdetaillayout">
-        <p class="productdetailname brandcolor titlefont">@Model.Name</p>
-        <p class="productdetaildescription textfont">@Html.Raw(Model.Description)</p>
+        <p class="productdetailname brandcolor titlefont name2">@Model.Name</p>
+        <p class="productdetailtext textfont">@Html.Raw(Model.Description)</p>
     </div>
 </div>
 
 <div class="productdetailnav">
-    <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <div class="nav nav-pills productdetailbutton" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link width-30 float-left productdetailnavmenu titlefont active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">INGREDIENTS</a>
         <a class="nav-link width-30 float-left productdetailnavmenu titlefont" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">BENEFITS & SIZE</a>
         <a class="nav-link width-30 float-left productdetailnavmenu titlefont" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">DIRECTION OF USE</a>
     </div>
     <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            <p class="titlefont tabcontentmargin">EACH CAPSULE CONTAINS</p>
-            <p class="textfont">@Html.Raw(@Model.Ingredient)</p>
-            <p class="titlefont tabcontentmargin">CONATINS NO ADDED</p>
-            <p class="textfont">@Model.ContainNoAdded</p>
+            <p class="titlefont tabcontentmargin productdetailtext">EACH CAPSULE CONTAINS</p>
+            <p class="textfont productdetailtext">@Html.Raw(@Model.Ingredient)</p>
+            <p class="titlefont tabcontentmargin productdetailtext">CONATINS NO ADDED</p>
+            <p class="textfont productdetailtext">@Model.ContainNoAdded</p>
         </div>
         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-            <p class="titlefont tabcontentmargin">BENIFITS</p>
-            <p class="textfont">@Html.Raw(@Model.Benefits)</p>
+            <p class="titlefont tabcontentmargin productdetailtext">BENIFITS</p>
+            <p class="textfont productdetailtext">@Html.Raw(@Model.Benefits)</p>
             <p class="titlefont tabcontentmargin">SIZE</p>
-            <p class="textfont">@Model.Size</p>
+            <p class="textfont productdetailtext">@Model.Size</p>
         </div>
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <p class="titlefont tabcontentmargin">DIRECTION OF USE</p>
-            <p class="textfont">@Html.Raw(@Model.Dosage)</p>
+            <p class="titlefont tabcontentmargin productdetailtext">DIRECTION OF USE</p>
+            <p class="textfont productdetailtext">@Html.Raw(@Model.Dosage)</p>
         </div>
     </div>
 </div>

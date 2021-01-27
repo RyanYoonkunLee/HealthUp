@@ -49,7 +49,7 @@
 }
 
 .sortbybutton {
-    width: 50%;
+    width: 50% !important;
 }
 
 .sortbybuttontext {
@@ -180,13 +180,15 @@
     color: #215357;
 }
 
-.productdetailname{
-    font-size: 50px;
+.productdetailname {
+    font-size: 3vw;
+    text-align: center;
 }
 
-.productdetaildescription{
-    font-size: 20px;
+.productdetailtext {
+    font-size: 1.3vw;
 }
+
 
 .tab-content{
     margin: 3%;
@@ -194,7 +196,11 @@
 }
 .tabcontentmargin {
     margin-top: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.name1{
+    display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1200px){
@@ -211,7 +217,7 @@
 
 @media (max-width: 767px){
     .productbanner {
-        background-image: url('../images/productpage/M-Products-page_top-banner.jpg');
+        background-image: url('../images/productpage/M-Products-page_top-banner-new.jpg');
     }
     .productlayout {
         width: 100%;
@@ -219,7 +225,63 @@
         margin-bottom: 20px;
     }
 
+    .producttitle {
+        width: 100%;
+        padding: 10%;
+        font-size: 6vw;
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+    .sortbutton {
+        font-size: 3.1vw;
+    }
     .productbutton {
         font-size: 3.2vw;
+    }
+
+    .productdetailname {
+        font-size: 7vw;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .halfwidth {
+        width: 100%; 
+    }
+
+    .productdetailtext {
+        font-size: 15px;
+    }
+
+    .name1 {
+        display: block;
+    }
+    .name2 {
+        display: none;
+        margin-top: 6%;
+    }
+    .productdetaillayout {
+        padding: 20px;
+    }
+
+    .productdetailbutton {
+        width: 100%;
+        margin-left: 5%;
+        font-size: 2.3vw;
+    }
+
+    .sortbytext {
+        width: 50%;
+        margin-left: 0%;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .tab-content {
+        margin-left: 8%;
+    }
+    .productdetailnav {
+        width: 100%;
+        margin-left: 0%;
     }
 }

@@ -3,8 +3,9 @@
     ViewData["Title"] = "ArticleDetail";
     <link href="~/css/article.css" rel="stylesheet" />
 }
-
-<img src=@Model.BannerImage />
+<div class="max-width">
+    <img src=@Model.BannerImage class="max-width"/>
+</div>
 <div class="articlelayout">
     <p class="titlefont brandcolor articledetailtitle">@Model.Title</p>
     <div class="textfont articlebody">

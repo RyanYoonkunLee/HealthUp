@@ -94,6 +94,20 @@
 
 @media (max-width: 787px){
     .articlebanner {
-        background-image: url('../images/article/M-Health-Article-top-banner.jpg');
+        background-image: url('../images/article/M-Health-Article-top-banner-new.jpg');
+    }
+
+    .articletitle {
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+
+    .articleListlayout {
+        width: 96%;
+        margin-left: 2%;
+    }
+
+    .relateboxlayout {
+        width: 50%;
     }
 }

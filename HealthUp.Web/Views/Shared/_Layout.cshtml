@@ -17,11 +17,11 @@
     </script>
 </head>
 <body class="container-fluid mb-0 websitelayout" onload="random()">
-    <header>
-        <div class="max-width">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/mainpage/logo/heath up logo_Colour.png" /></a>
-        </div>
-        <div class="max-width">
+    <header>       
+        <div class="nav-layout">
+            <div class="max-width">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/mainpage/logo/heath up logo_Colour.png" /></a>
+            </div>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-width">©2020 Health Well Ltd. Auckland. All Rights Reserved.</div>
+        <div class="max-width">©<script>document.write(new Date().getFullYear())</script> Health Well Ltd. Auckland. All Rights Reserved.</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
