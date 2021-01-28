@@ -5727,11 +5727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\New Guinea\\HealthUp\\HealthUp\\HealthUp.csproj",
+      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp\\HealthUp.csproj",
       "projectName": "HealthUp",
-      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Guinea\\HealthUp\\HealthUp\\HealthUp.csproj",
+      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp\\HealthUp.csproj",
       "packagesPath": "C:\\Users\\Yoonkun Lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Guinea\\HealthUp\\HealthUp\\obj\\",
+      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
