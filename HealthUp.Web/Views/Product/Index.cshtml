@@ -1,6 +1,6 @@
 ﻿@model List<HealthUp.ViewModel.ProductViewModel>;
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Product";
     <link href="~/css/product.css" rel="stylesheet" />
     <link href="~/css/Shared.css" rel="stylesheet" />
 }
@@ -22,35 +22,91 @@
         <div class="tab-pane fade show active sortbytextbox" id="pills-productrange" role="tabpanel" aria-labelledby="pills-home-tab">
             @foreach (var category in ViewBag.Categories)
             {
-                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-searchcolumn="Category" asp-route-sort=@category.Name><p class="sortbytext">@category.Name</p></a>
+                <button class="sortbytext category" onclick="findcategory('@category.Name')">@category.Name</button>
             }
         </div>
         <div class="tab-pane fade sortbytextbox" id="pills-function" role="tabpanel" aria-labelledby="pills-profile-tab">
             @foreach (var function in ViewBag.Functions)
             {
-                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-searchcolumn="Function" asp-route-sort=@function.Name><p class="sortbytext">@function.Name</p></a>
+                <button class="sortbytext function" onclick="findfunction('@function.Name')" >@function.Name</button>
             }
         </div>
     </div>
 </div>
 
-@if (Model != null)
-{
-    @foreach (var item in Model)
+<div id="productlist">
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="productlayout">
+                <a class="notextdecoration" href="@Url.Action("FindName", "Product", new { id = @item.Id })">
+                    <img class="maxwidth" loading="lazy" src=@item.ThumbnailImage />
+                    <div class="productbutton">
+                        @item.Name @item.Capsule
+                    </div>
+                </a>
+            </div>
+        }
+    }
+    else
     {
         <div class="productlayout">
-            <a class="notextdecoration" href="@Url.Action("ProductDetail", "Product", new { id = @item.Id })">
-                <img class="maxwidth" src=@item.ThumbnailImage />
-                <div class="productbutton">
-                    @item.Name
-                </div>
-            </a>
+            <p>No Result Found.</p>
         </div>
     }
-}
-else
-{
-    <div class="productlayout">
-        <p>No Result Found.</p>
-    </div>
-}
+</div>
+
+
+<script type="text/javascript">
+
+    function findcategory(input) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("FindCategory", "Product")',
+            dataType: 'json',
+            data: {
+                name: input
+            },
+            success: function (data) {
+                var result = data;
+               createImage(result)
+            }
+        });
+    }
+
+        function findfunction(input) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("FindFunction", "Product")',
+            dataType: 'json',
+            data: {
+                name: input
+            },
+            success: function (data) {
+                var result = data;
+               createImage(result)
+            }
+        });
+    }
+
+    function createImage(obj) {
+        var strDOM = "";
+
+        for (var i = 0; i < obj.length; i++) {
+            var image = obj[i];
+
+            strDOM += "<div class='productlayout'>" 
+            strDOM += "<a class='notextdecoration' href='Product/FindName?id=" + image.id + "'>"
+            strDOM += "<img class='maxwidth' loading='lazy' src=" + image.thumbnailImage + " />"
+            strDOM += "<div class='productbutton'>" + image.name + "</div></a></div>";
+        }
+        document.getElementById('productlist').innerHTML = strDOM;
+        
+    }
+
+    function findFunction(input) {
+        alert(input);
+    }
+
+</script>

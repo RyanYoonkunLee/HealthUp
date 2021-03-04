@@ -1,0 +1,143 @@
+﻿.storybanner {
+    background-image: url('../images/ourstory/Our-Story_top-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.storybannertext {
+    padding: 13%;
+    font-size: 40px;
+    color: white
+}
+
+.maxwidth{
+    width:100%;
+}
+
+.result {
+    text-align: center;
+    color: #00a700;
+    font-size: 1.3vw;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.storylefttextpadding {
+    float: left;
+    padding: 6%;
+}
+
+.storyrighttextpadding {
+    padding: 5%;
+}
+
+.storylefttext{
+    font-size: 20px;
+}
+
+.storytitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.storybody {
+    margin-bottom: 50px;
+}
+
+.storycontact {
+    padding: 5%;
+}
+
+.paddingleft-10 {
+    padding-left: 10%
+}
+
+.contactbox {
+    margin-bottom: 15%;
+    font-size: 20px;
+}
+
+.contacttitle {
+    font-size: 30px !important;
+    margin-bottom: 30px;
+}
+
+.sendbutton {
+    background-color: #215357;
+    width: 25%;
+    margin-right: 33%;
+    margin-left: 33%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.emailbox{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.emailtextarea{
+    height: 200px;
+}
+
+.middle2{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .storybanner {
+        background-image: url('../images/ourstory/M-Our-Story_top-banner-new (1).jpg');
+    }
+
+    .storybannertext {
+        padding-top: 35%;
+        padding-bottom: 35%;
+    }
+    
+    .width-30 {
+        width: 100%;
+    }
+
+    .width-70 {
+        width: 100%;
+    }
+
+    .storytitle {
+        text-align: center;
+    }
+
+    .halfwidth {
+        width: 100%;
+    }
+
+    .emailbox {
+        font-size: 17px;
+    }
+
+    .storybody {
+        font-size: 16px;
+    }
+    .alert-danger {
+        font-size: 15px;
+    }
+
+    .middle1 {
+        display: none;
+    }
+    .middle2 {
+        display: block;
+    }
+
+    .alert-success {
+        font-size: 4vw;
+    }
+}

@@ -254,7 +254,8 @@ namespace HealthUp.Web.wwwroot
             return RedirectToAction("NewProductList", "Admin");
         }
         #endregion
-
+        
+        #region
         [Authorize(Roles = "Admin")]
         public IActionResult BestSellerList()
         {
@@ -305,5 +306,6 @@ namespace HealthUp.Web.wwwroot
             _best.Delete(id);
             return RedirectToAction("BestSellerList", "Admin");
         }
+        #endregion
     }
 }

@@ -31,13 +31,15 @@ a:hover{
 
 /* Main banner */
 .mainbanner {
-    background-image: url('../images/mainpage/banner1.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 13%;
 }
+.m-mainbanner {
+    display:none;
+}
 .mainbanertext {
-    color:white;
+    color: white;
     margin-bottom: 30px;
 }
 .buttoncolor{
@@ -111,8 +113,9 @@ a:hover{
     background-color: #F5F5F5;
     overflow: hidden;
     margin-bottom: 50px;
-
+    padding-bottom: 25px;
 }
+
 
 .bestsellerimagewidth{
     width: 50%;
@@ -136,7 +139,7 @@ a:hover{
 }
 
 .bestsellertitle {
-    font-size: 2.5vw;
+    font-size: 1.9vw;
     font-weight: bold;
     margin-top: 13%;
 }
@@ -187,6 +190,17 @@ a:hover{
 }
 
 .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot1 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -382,10 +396,23 @@ a:hover{
 
 @media (max-width: 767px) {
 
-    .mainbanner {
-        background-image: url('../images/mainpage/mainbanner/M-Home-page_top-banner1-new (1).jpg') !important;
+    .m-mainbanner {
+        background-image: url('../images/mainpage/mainbanner/M-banner1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 13%;
+        display: block;
     }
-
+    .m-maintext{
+        font-size: 6vw;
+    }
+    .mainbanner {
+        display: none;
+    }
+    .mainbanertext {
+        margin-bottom: 15%;
+        margin-top: 15%;
+    }
     .dot {
         width: 10px;
         height: 10px;

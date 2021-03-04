@@ -37,6 +37,7 @@ namespace HealthUp.Web.Controllers
         {
             var article = _article.FindById(id);
             var viewModel = articleService.DataToDetailView(article);
+            
             ViewBag.RelatedProducts = productService.ConvertDataListToView(_product.GetRelatedProduct(article.RelateProduct));
 
             return View(viewModel);

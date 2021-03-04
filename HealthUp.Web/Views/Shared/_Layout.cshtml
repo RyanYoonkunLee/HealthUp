@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Shared.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript">
-        function random() {
-            var random = Math.floor(Math.random() * 3) + 1;
-            var image = "url('../images/mainpage/mainbanner/banner" + random + ".jpg')";
-            document.getElementById("mainbanner").style.backgroundImage = image;
-        }      
-    </script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/mainpage/logo/Favicon2.png" />
 </head>
-<body class="container-fluid mb-0 websitelayout" onload="random()">
+<body class="container-fluid mb-0 websitelayout">
     <header>       
         <div class="nav-layout">
             <div class="max-width">
@@ -36,6 +31,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark nav-margin titlefont" asp-area="" asp-controller="Product" asp-action="Index" id="product">Product</a>
                                 <div class="dropdown-menu">
+                                    @Html.ActionLink("All", "Index", "Product", new { searchcolumn = "Category", sort = "All" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("New", "Index", "Product", new { searchcolumn = "Category", sort = "New" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Green Mussel", "Index", "Product", new { searchcolumn = "Category", sort = "Green Mussel" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Colostrum", "Index", "Product", new { searchcolumn = "Category", sort = "Colostrum" }, new { @class = "dropdown-item" })
@@ -44,7 +40,7 @@
                                     @Html.ActionLink("Red Krill Oil", "Index", "Product", new { searchcolumn = "Category", sort = "Red Krill Oil" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Policosanol", "Index", "Product", new { searchcolumn = "Category", sort = "Policosanol" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Royal Jelly", "Index", "Product", new { searchcolumn = "Category", sort = "Royal Jelly" }, new { @class = "dropdown-item" })
-                                    @Html.ActionLink("EPO", "Index", "Product", new { searchcolumn = "Category", sort = "EPO" }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("Evening Primrose Oil", "Index", "Product", new { searchcolumn = "Category", sort = "Evening Primrose Oil" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Spirulina", "Index", "Product", new { searchcolumn = "Category", sort = "Spirulina" }, new { @class = "dropdown-item" })
                                     @Html.ActionLink("Manuka Honey", "Index", "Product", new { searchcolumn = "Category", sort = "Manuka Honey" }, new { @class = "dropdown-item" })
                                 </div>
@@ -84,21 +80,19 @@
                 <div class="footertext">
                     <a class="footermenulink" asp-area="" asp-controller="Story" asp-action="Index"><p class="footerheading"><strong>CONTACT US</strong></p></a>
                     <p class="footermenumargin"><strong>Phone: </strong>+64 9 442 5992</p>
-                    <p class="footermenumargin"><strong>Email: </strong>healthup777@gmail.com</p>
-                    <p class="footermenumargin"><strong>Address: </strong>HealthUP Corporation Inc,</p>
-                    <p class="footermenumargin">129 Onewa Road, Northcote, Auckland</p>
+                    <a class="footermenulink" href="~/Story/Index/#contact"><p class="footermenumargin"><strong>Email: </strong>info@healthup.co.nz</p></a>
                 </div>
             </div>
             <div class="footer_menu_layout">
                 <div class="footertext">
                     <p class="footerheading"><strong>HEALTHUP</strong></p>
-                    <a class="footermenulink" asp-area="" asp-controller="Product" asp-action="Index"><p class="footermenumargin">Our products</p></a>
+                    <a class="footermenulink" asp-area="" asp-controller="Product" asp-action="Index"><p class="footermenumargin">Our Products</p></a>
                     <a class="footermenulink" asp-area="" asp-controller="Article" asp-action="Index"><p class="footermenumargin">Health Article</p></a>
                     <a class="footermenulink" asp-area="" asp-controller="Story" asp-action="Index"><p class="footermenumargin">Our Story</p></a>
                 </div>
             </div>
         </div>
-        <div class="max-width">©<script>document.write(new Date().getFullYear())</script> Health Well Ltd. Auckland. All Rights Reserved.</div>
+        <div class="max-width">©<script>document.write(new Date().getFullYear())</script> HealthUP Ltd. Auckland. All Rights Reserved.</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

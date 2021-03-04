@@ -8,11 +8,16 @@
 @using (Html.BeginForm("ProductUpdate", "Admin", FormMethod.Post))
 {
 
-<div class="form-group">
-    @Html.LabelFor(m => m.Name)
-    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
-</div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Capsule)
+        @Html.TextBoxFor(m => m.Capsule, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Capsule, "", new { @class = "text-danger" })
+    </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ThumbnailImage)
         @Html.TextAreaFor(m => m.ThumbnailImage, new { @class = "form-control" })
@@ -26,8 +31,16 @@
         @Html.TextAreaFor(m => m.Benefits, new { @class = "form-control" })
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.ContainNoAdded)
+        @Html.TextAreaFor(m => m.ContainNoAdded, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Dosage)
         @Html.TextBoxFor(m => m.Dosage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Warning)
+        @Html.TextAreaFor(m => m.Warning, new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Ingredient)
@@ -115,3 +128,4 @@
         }
     }
 </script>
+<a type="button" class="btn btn-warning mb-5 float-right" asp-area="" asp-controller="Admin" asp-action="Index">Back</a>

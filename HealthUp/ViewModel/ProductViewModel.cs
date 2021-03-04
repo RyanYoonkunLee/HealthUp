@@ -10,6 +10,7 @@ namespace HealthUp.ViewModel
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public string Capsule { get; set; }
         public string Description { get; set; }
         public string Benefits { get; set; }
         public string Size { get; set; }
@@ -26,5 +27,6 @@ namespace HealthUp.ViewModel
         public int CategoryExpose { get; set; }
         [Required]
         public int ProductExpose { get; set; }
+        public string Warning { get; set; }
     }
 }

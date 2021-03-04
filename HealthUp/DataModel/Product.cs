@@ -12,6 +12,7 @@ namespace HealthUp.DataModel
         public string ThumbnailImage { get; set; }
         [Required]
         public string Name { get; set; }       
+        public string Capsule { get; set; }
         public string Description { get; set; }       
         public string Ingredients { get; set; }      
         public string Dosage { get; set; }      
@@ -23,6 +24,7 @@ namespace HealthUp.DataModel
         public string ProductImages { get; set; }
         public int CategoryExpose { get; set; }
         public int ProductExpose { get; set; }
+        public string Warning { get; set; }
         
     }
 }

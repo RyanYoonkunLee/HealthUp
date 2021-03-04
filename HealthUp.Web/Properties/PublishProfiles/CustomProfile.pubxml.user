@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://122.201.126.201/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:08:58</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:08:58</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>08/03/2020 18:30:10</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="HealthUp.Data.Sql.dll">
+      <publishTime>02/01/2021 14:18:16</publishTime>
+    </File>
+    <File Include="HealthUp.Data.Sql.exe">
+      <publishTime>02/01/2021 14:18:16</publishTime>
+    </File>
+    <File Include="HealthUp.Data.Sql.pdb">
+      <publishTime>02/01/2021 14:18:16</publishTime>
+    </File>
+    <File Include="HealthUp.dll">
+      <publishTime>02/01/2021 14:17:54</publishTime>
+    </File>
+    <File Include="HealthUp.exe">
+      <publishTime>02/01/2021 14:17:54</publishTime>
+    </File>
+    <File Include="HealthUp.pdb">
+      <publishTime>02/01/2021 14:17:54</publishTime>
+    </File>
+    <File Include="HealthUp.Web.deps.json">
+      <publishTime>02/01/2021 14:34:09</publishTime>
+    </File>
+    <File Include="HealthUp.Web.dll">
+      <publishTime>02/01/2021 14:33:54</publishTime>
+    </File>
+    <File Include="HealthUp.Web.exe">
+      <publishTime>02/01/2021 14:33:54</publishTime>
+    </File>
+    <File Include="HealthUp.Web.pdb">
+      <publishTime>02/01/2021 14:33:54</publishTime>
+    </File>
+    <File Include="HealthUp.Web.runtimeconfig.json">
+      <publishTime>02/01/2021 14:14:31</publishTime>
+    </File>
+    <File Include="HealthUp.Web.Views.dll">
+      <publishTime>02/01/2021 14:33:57</publishTime>
+    </File>
+    <File Include="HealthUp.Web.Views.pdb">
+      <publishTime>02/01/2021 14:33:57</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Razor.Language.dll">
+      <publishTime>11/16/2019 06:08:46</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/14/2020 22:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.HashCode.dll">
+      <publishTime>11/15/2019 08:38:50</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>09/12/2019 17:08:58</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.dll">
+      <publishTime>09/12/2019 17:07:46</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Razor.dll">
+      <publishTime>11/16/2019 06:08:52</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>09/12/2019 17:08:34</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:32</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>09/23/2020 17:19:02</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>09/23/2020 17:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>09/23/2020 17:19:40</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>09/23/2020 17:19:44</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
+      <publishTime>09/23/2020 16:04:22</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>09/23/2020 16:04:46</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>09/23/2020 16:04:32</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Binder.dll">
+      <publishTime>09/23/2020 16:05:18</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.dll">
+      <publishTime>09/23/2020 16:04:40</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>09/23/2020 16:04:46</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>09/23/2020 16:04:36</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>09/23/2020 16:06:36</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.dll">
+      <publishTime>09/23/2020 16:06:26</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>09/23/2020 16:04:36</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>09/23/2020 16:05:20</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>04/29/2019 22:04:14</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>06/24/2019 19:50:38</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>06/24/2019 19:53:26</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>06/24/2019 19:54:24</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>06/24/2019 19:59:32</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>06/24/2019 19:56:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>08/03/2020 18:29:50</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>08/03/2020 18:30:02</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>08/03/2020 18:30:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>08/03/2020 18:30:02</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>08/03/2020 18:29:58</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>08/03/2020 18:29:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>08/03/2020 18:30:06</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/24/2018 17:44:14</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>04/24/2018 21:27:10</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:12</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:14</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:14</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:24</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>07/20/2020 21:33:18</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/sni.dll">
+      <publishTime>07/12/2017 11:24:24</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/sni.dll">
+      <publishTime>07/12/2017 11:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/sni.dll">
+      <publishTime>07/12/2017 11:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:26</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>07/20/2020 21:33:24</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 13:29:44</publishTime>
+    </File>
+    <File Include="System.Collections.Immutable.dll">
+      <publishTime>04/14/2020 22:38:40</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>11/05/2016 04:55:44</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>11/05/2016 04:55:46</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>05/15/2018 13:29:38</publishTime>
+    </File>
+    <File Include="System.Data.SqlClient.dll">
+      <publishTime>07/20/2020 21:21:14</publishTime>
+    </File>
+    <File Include="System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>04/14/2020 22:48:06</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>06/24/2019 19:49:50</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 13:29:44</publishTime>
+    </File>
+    <File Include="tr/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:14</publishTime>
+    </File>
+    <File Include="tr/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="tr/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>02/01/2021 14:34:09</publishTime>
+    </File>
+    <File Include="wwwroot/css/admin.css">
+      <publishTime>01/07/2021 23:52:44</publishTime>
+    </File>
+    <File Include="wwwroot/css/article.css">
+      <publishTime>01/31/2021 18:27:21</publishTime>
+    </File>
+    <File Include="wwwroot/css/login.css">
+      <publishTime>01/21/2021 21:26:34</publishTime>
+    </File>
+    <File Include="wwwroot/css/mainpage.css">
+      <publishTime>01/29/2021 16:47:28</publishTime>
+    </File>
+    <File Include="wwwroot/css/product.css">
+      <publishTime>02/01/2021 13:47:44</publishTime>
+    </File>
+    <File Include="wwwroot/css/Shared.css">
+      <publishTime>01/27/2021 11:13:29</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/css/story.css">
+      <publishTime>01/29/2021 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/Font/freefontsfamily.com.txt">
+      <publishTime>05/04/2018 08:46:26</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-Black.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-Bold.otf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-BookItalic.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-Light.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-Thin.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-ThinItalic.otf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-UltraItalic.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-XLight.otf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/Gotham-XLightItalic.otf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamBold.ttf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamBoldItalic.ttf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamBook.ttf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamBookItalic.ttf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamLight.ttf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamLightItalic.ttf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamMedium.ttf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamMediumItalic.ttf">
+      <publishTime>07/19/2016 23:23:54</publishTime>
+    </File>
+    <File Include="wwwroot/Font/GothamMedium_1.ttf">
+      <publishTime>07/19/2016 23:23:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/admin/Admin-page-button-article.jpg">
+      <publishTime>01/06/2021 19:11:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/admin/Admin-page-button-best.jpg">
+      <publishTime>01/06/2021 19:11:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/admin/Admin-page-button-new.jpg">
+      <publishTime>01/06/2021 19:11:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/admin/Admin-page-button-products.jpg">
+      <publishTime>01/06/2021 19:10:42</publishTime>
+    </File>
+    <File Include="wwwroot/images/admin/Admin-page-top-banner.jpg">
+      <publishTime>01/06/2021 19:12:00</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article1_main_banner.jpg">
+      <publishTime>01/30/2021 20:38:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article1_thumbnail.jpg">
+      <publishTime>01/30/2021 20:40:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article2_main_banner.jpg">
+      <publishTime>01/30/2021 20:37:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article2_thumbnail.jpg">
+      <publishTime>01/30/2021 20:41:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article3_main_banner.jpg">
+      <publishTime>01/30/2021 20:38:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article3_thumbnail.jpg">
+      <publishTime>01/30/2021 20:39:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article4_main_banner.jpg">
+      <publishTime>01/30/2021 20:35:40</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article4_thumbnail.jpg">
+      <publishTime>01/30/2021 20:41:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article5_main_banner.jpg">
+      <publishTime>01/30/2021 20:37:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article5_thumbnail.jpg">
+      <publishTime>01/30/2021 20:40:40</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article6_main_banner.jpg">
+      <publishTime>01/30/2021 20:45:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Article6_thumbnail.jpg">
+      <publishTime>01/30/2021 20:44:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/Health-Article-top-banner.jpg">
+      <publishTime>01/07/2021 18:01:31</publishTime>
+    </File>
+    <File Include="wwwroot/images/article/M-Health-Article-top-banner-new.jpg">
+      <publishTime>01/25/2021 17:05:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bestseller/Colostrum-1350-best-seller.png">
+      <publishTime>01/19/2021 15:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bestseller/Green-mussel-7500-best-seller3.png">
+      <publishTime>01/19/2021 15:50:37</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bestseller/Green-mussel-all-in-one-best-seller2.png">
+      <publishTime>01/19/2021 15:50:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bestseller/icon.png">
+      <publishTime>12/08/2020 14:47:43</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bestseller/Propolis-1250-bestseller2.png">
+      <publishTime>01/19/2021 15:49:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/bottombanner/bottombanner.png">
+      <publishTime>12/04/2020 16:30:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/logo/Favicon.png">
+      <publishTime>01/30/2021 20:49:26</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/logo/Favicon2.png">
+      <publishTime>01/30/2021 20:50:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/logo/heath up logo_Colour.png">
+      <publishTime>12/04/2020 13:51:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/logo/heath up logo_White.png">
+      <publishTime>12/04/2020 14:06:49</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/banner1.jpg">
+      <publishTime>12/08/2020 14:33:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/banner2.jpg">
+      <publishTime>12/08/2020 14:33:37</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/banner3.jpg">
+      <publishTime>12/08/2020 14:33:39</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/M-Home-page_top-banner1-1.jpg">
+      <publishTime>01/17/2021 18:14:59</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/M-Home-page_top-banner1-2.jpg">
+      <publishTime>01/17/2021 18:21:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/M-Home-page_top-banner1-new %281%29.jpg">
+      <publishTime>01/24/2021 13:45:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/M-Home-page_top-banner1-new.jpg">
+      <publishTime>01/19/2021 15:58:42</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/mainbanner/M-Home-page_top-banner1.jpg">
+      <publishTime>01/17/2021 18:08:33</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/newproduct/Colostrum-1600-new-products.png">
+      <publishTime>01/19/2021 15:55:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/newproduct/green-mussel-ultra-new-products.png">
+      <publishTime>01/19/2021 15:55:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/newproduct/icon.png">
+      <publishTime>12/08/2020 14:47:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/newproduct/Lactoferrin-Colostrum-new-products.png">
+      <publishTime>01/19/2021 15:55:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/newproduct/royal-jelly-newproduct2.png">
+      <publishTime>01/19/2021 15:55:15</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange1.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange10.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange2.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange3.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange4.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange5.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange6.png">
+      <publishTime>12/29/2020 14:07:09</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange7.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange8.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/productrange/productrange9.png">
+      <publishTime>12/24/2020 00:04:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/whychooseus/Home page_why choose us icon1.png">
+      <publishTime>12/04/2020 17:18:17</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/whychooseus/Home page_why choose us icon2.png">
+      <publishTime>12/04/2020 17:18:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/mainpage/whychooseus/Home page_why choose us icon3.png">
+      <publishTime>12/04/2020 17:18:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/M-Our-Story-middle-new %281%29.jpg">
+      <publishTime>01/24/2021 13:51:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/M-Our-Story-middle-new.jpg">
+      <publishTime>01/23/2021 21:51:53</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/M-Our-Story_top-banner-new %281%29.jpg">
+      <publishTime>01/24/2021 13:51:07</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/M-Our-Story_top-banner-new.jpg">
+      <publishTime>01/23/2021 21:51:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/Our-Story-middle.jpg">
+      <publishTime>01/07/2021 20:45:39</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/Our-Story_bottom.jpg">
+      <publishTime>01/07/2021 20:45:37</publishTime>
+    </File>
+    <File Include="wwwroot/images/ourstory/Our-Story_top-banner.jpg">
+      <publishTime>01/07/2021 20:45:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1.Colostrum-milk-1350-main.jpg">
+      <publishTime>01/04/2021 01:22:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Colostrum-milk-1600-main.jpg">
+      <publishTime>01/04/2021 17:20:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-7500-big-main.jpg">
+      <publishTime>01/03/2021 23:46:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-7500-main.jpg">
+      <publishTime>01/04/2021 00:30:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-8500-big-main.jpg">
+      <publishTime>01/04/2021 00:41:12</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-8500-main.jpg">
+      <publishTime>01/04/2021 01:10:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-all-in-all-big-main.jpg">
+      <publishTime>01/01/2021 10:55:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-all-in-all-main.jpg">
+      <publishTime>12/31/2020 23:47:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-all-in-one_main.jpg">
+      <publishTime>01/03/2021 23:27:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Green-mussel-oil-ultra_main.jpg">
+      <publishTime>01/03/2021 23:33:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Lactoferrin-Colostrum_main.jpg">
+      <publishTime>01/04/2021 17:57:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Manuka-honey-500-main.jpg">
+      <publishTime>01/04/2021 18:16:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Multi-Manuka-Honey-main.jpg">
+      <publishTime>01/04/2021 18:22:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Omega-fish-oil-main.jpg">
+      <publishTime>01/04/2021 18:34:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Policosanol-omega-200-main.jpg">
+      <publishTime>01/04/2021 19:47:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Policosanol-omega-30-main.jpg">
+      <publishTime>01/04/2021 19:06:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Policosanol_main.jpg">
+      <publishTime>01/04/2021 18:42:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Primrose-oil-100-main.jpg">
+      <publishTime>01/05/2021 19:57:42</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Primrose-Oil-300-main.jpg">
+      <publishTime>01/05/2021 20:06:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Propolis-1250-365-main.jpg">
+      <publishTime>01/05/2021 20:29:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Propolis-1260-60-main.jpg">
+      <publishTime>01/05/2021 20:21:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Propolis-Extra-main.jpg">
+      <publishTime>01/05/2021 19:03:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Propolis-Standard-main.jpg">
+      <publishTime>01/05/2021 21:31:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Red-krill-oil-1500-main.jpg">
+      <publishTime>01/05/2021 19:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Red-krill-oil-main.jpg">
+      <publishTime>01/05/2021 19:34:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Royal-jelly-main.jpg">
+      <publishTime>01/05/2021 21:37:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/1Sprirulina-main.jpg">
+      <publishTime>01/05/2021 18:53:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2.Colostrum-milk-1350-about.jpg">
+      <publishTime>01/04/2021 01:26:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Colostrum-milk-1600-About.jpg">
+      <publishTime>01/04/2021 17:30:30</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-7500-big-about.jpg">
+      <publishTime>01/03/2021 23:50:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-7500-ingredient.jpg">
+      <publishTime>01/04/2021 00:23:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-8500-big-ingredient.jpg">
+      <publishTime>01/04/2021 00:56:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-8500-ingredient.jpg">
+      <publishTime>01/04/2021 01:14:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-all-in-all-about.jpg">
+      <publishTime>01/01/2021 10:58:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-all-in-all-big-about.jpg">
+      <publishTime>01/01/2021 10:16:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-all-in-one-ingredient.jpg">
+      <publishTime>01/03/2021 23:27:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Green-mussel-oil-ultra_ingredient.jpg">
+      <publishTime>01/03/2021 23:35:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Lactoferrin-Colostrum_about.jpg">
+      <publishTime>01/04/2021 18:01:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Manuka-honey-500-about.jpg">
+      <publishTime>01/04/2021 18:20:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Multi-Manuka-Honey-about.jpg">
+      <publishTime>01/04/2021 18:23:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Omega-fish-oil-about.jpg">
+      <publishTime>01/04/2021 18:38:12</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Policosanol-omega-200-about.jpg">
+      <publishTime>01/04/2021 20:15:30</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Policosanol-omega-30-ingredient.jpg">
+      <publishTime>01/04/2021 19:32:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Policosanol_ingredient.jpg">
+      <publishTime>01/04/2021 18:44:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Primrose-oil-100-about.jpg">
+      <publishTime>01/05/2021 19:59:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Primrose-Oil-300-about.jpg">
+      <publishTime>01/05/2021 20:09:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Propolis-1250-365-ingredient.jpg">
+      <publishTime>01/05/2021 20:43:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Propolis-1260-60-ingredient.jpg">
+      <publishTime>01/05/2021 20:24:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Propolis-Extra-about.jpg">
+      <publishTime>01/05/2021 19:06:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Propolis-Standard-about.jpg">
+      <publishTime>01/05/2021 21:30:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Red-krill-oil-1500-ingredient.jpg">
+      <publishTime>01/05/2021 19:25:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Red-krill-oil-ingredient.jpg">
+      <publishTime>01/05/2021 19:37:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Royal-jelly-about.jpg">
+      <publishTime>01/05/2021 21:42:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/2Sprirulina-ingredient.jpg">
+      <publishTime>01/05/2021 18:56:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3.Colostrum-milk-1350-ingredient.jpg">
+      <publishTime>01/04/2021 01:34:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Colostrum-milk-1600-Ingredient.jpg">
+      <publishTime>01/04/2021 17:36:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-7500-big-ingredient.jpg">
+      <publishTime>01/04/2021 00:04:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-7500-pills.jpg">
+      <publishTime>01/04/2021 00:32:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-8500-big-about.jpg">
+      <publishTime>01/04/2021 01:01:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-8500-pill.jpg">
+      <publishTime>01/04/2021 01:16:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-all-in-all-big-ingredient.jpg">
+      <publishTime>01/01/2021 11:08:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-all-in-all-ingredient.jpg">
+      <publishTime>01/01/2021 11:09:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-all-in-one_combo.jpg">
+      <publishTime>01/03/2021 23:28:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Green-mussel-oil-ultra_combo.jpg">
+      <publishTime>01/03/2021 23:37:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Lactoferrin-Colostrum_ingredient.jpg">
+      <publishTime>01/04/2021 18:06:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Manuka-honey-500-ingredient.jpg">
+      <publishTime>01/04/2021 18:19:30</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Multi-Manuka-Honey-ingredient.jpg">
+      <publishTime>01/04/2021 18:24:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Policosanol-omega-200-ingredient.jpg">
+      <publishTime>01/04/2021 19:51:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Policosanol-omega-30-pill.jpg">
+      <publishTime>01/04/2021 19:33:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Policosanol_pill.jpg">
+      <publishTime>01/04/2021 18:45:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Primrose-oil-100-ingredient.jpg">
+      <publishTime>01/05/2021 20:04:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Primrose-Oil-300-ingredient.jpg">
+      <publishTime>01/05/2021 20:14:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Propolis-1250-365-about.jpg">
+      <publishTime>01/05/2021 20:50:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Propolis-1260-60-pill.jpg">
+      <publishTime>01/05/2021 20:25:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Propolis-Extra-ingredient.jpg">
+      <publishTime>01/05/2021 19:15:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Propolis-Standard-ingredient.jpg">
+      <publishTime>01/05/2021 21:30:12</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Red-krill-oil-1500-pill.jpg">
+      <publishTime>01/05/2021 19:26:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Red-krill-oil-pill.jpg">
+      <publishTime>01/05/2021 19:38:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/3Royal-jelly-ingredient.jpg">
+      <publishTime>01/05/2021 21:41:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4.Colostrum-milk-1350-bottle.jpg">
+      <publishTime>01/04/2021 01:36:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Colostrum-milk-1600-bottle.jpg">
+      <publishTime>01/04/2021 17:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-7500-big-open.jpg">
+      <publishTime>01/04/2021 00:05:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-7500-combo.jpg">
+      <publishTime>01/04/2021 00:15:30</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-8500-big-open.jpg">
+      <publishTime>01/04/2021 01:02:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-8500-combo.jpg">
+      <publishTime>01/04/2021 01:18:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-all-in-all-big-pills.jpg">
+      <publishTime>01/01/2021 10:36:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-all-in-all-pills.jpg">
+      <publishTime>01/01/2021 10:52:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-all-in-one_pill.jpg">
+      <publishTime>01/03/2021 23:28:26</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Green-mussel-oil-ultra_pill.jpg">
+      <publishTime>01/03/2021 23:38:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Lactoferrin-Colostrum_box-open.jpg">
+      <publishTime>01/04/2021 18:08:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Policosanol-omega-200-bottle-main.jpg">
+      <publishTime>01/04/2021 20:17:00</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Policosanol_combo.jpg">
+      <publishTime>01/04/2021 18:54:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Propolis-1250-365-bottle.jpg">
+      <publishTime>01/05/2021 21:20:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Propolis-Extra-bottle.jpg">
+      <publishTime>01/05/2021 19:11:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Propolis-Standard-bottle.jpg">
+      <publishTime>01/05/2021 21:34:40</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/4Royal-jelly-bottle.jpg">
+      <publishTime>01/05/2021 21:44:52</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5.Colostrum-milk-1350-bottle-about.jpg">
+      <publishTime>01/04/2021 01:38:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Colostrum-milk-1600-bottle-About.jpg">
+      <publishTime>01/04/2021 17:33:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Green-mussel-8500-combo.jpg">
+      <publishTime>01/04/2021 01:06:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Green-mussel-all-in-all-big-pills2.jpg">
+      <publishTime>01/01/2021 10:37:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Green-mussel-all-in-all-combo.jpg">
+      <publishTime>01/01/2021 10:51:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Lactoferrin-Colostrum_pill.jpg">
+      <publishTime>01/04/2021 18:09:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/5Policosanol-omega-200-bottle-about.jpg">
+      <publishTime>01/04/2021 20:18:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/6Green-mussel-all-in-all-big-combo.jpg">
+      <publishTime>01/01/2021 10:48:30</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/6Lactoferrin-Colostrum_combo.jpg">
+      <publishTime>01/04/2021 18:12:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/6Policosanol-omega-200-bottle-ingredient.jpg">
+      <publishTime>01/04/2021 20:20:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/productimage/7Policosanol-omega-200-combo.jpg">
+      <publishTime>01/04/2021 20:22:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/M-Products-page_top-banner-new.jpg">
+      <publishTime>01/24/2021 13:45:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/productbanner.png">
+      <publishTime>12/04/2020 16:30:11</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Colostrum-milk-1350.png">
+      <publishTime>12/13/2020 14:34:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Colostrum-milk-1600-new.jpg">
+      <publishTime>01/28/2021 19:43:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Colostrum-milk-1600.png">
+      <publishTime>12/13/2020 14:34:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-Mussel-7500-240.png">
+      <publishTime>01/08/2021 12:48:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-Mussel-7500-60-new.png">
+      <publishTime>01/28/2021 19:43:47</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-Mussel-7500.png">
+      <publishTime>12/13/2020 13:49:48</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-8500-225.jpg">
+      <publishTime>01/06/2021 19:42:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-8500-75.jpg">
+      <publishTime>01/06/2021 19:42:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-all-in-all-180.png">
+      <publishTime>01/08/2021 12:48:33</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-all-in-all-90.png">
+      <publishTime>01/08/2021 12:48:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-all-in-one.png">
+      <publishTime>12/13/2020 13:50:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Green-mussel-oil-ultra.png">
+      <publishTime>12/13/2020 13:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Lactoferrin-Colostrum.jpg">
+      <publishTime>01/06/2021 20:14:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Manuka-honey-500g.jpg">
+      <publishTime>01/06/2021 18:40:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Manuka-honey.jpg">
+      <publishTime>01/06/2021 18:40:12</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Omega-fish-oil-1000.png">
+      <publishTime>12/13/2020 14:35:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Policosanol-Omega-3-200.png">
+      <publishTime>12/13/2020 14:35:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Policosanol-Omega-3-30.jpg">
+      <publishTime>01/06/2021 20:22:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_policosanol.png">
+      <publishTime>12/13/2020 14:35:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Primrose-oil-1000-100-new.jpg">
+      <publishTime>01/28/2021 19:43:43</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Primrose-oil-1000-100.png">
+      <publishTime>12/10/2020 19:31:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Primrose-oil-1000-300.png">
+      <publishTime>12/13/2020 14:36:44</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Propolis-1250-365.jpg">
+      <publishTime>01/06/2021 20:02:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Propolis-1250-60.png">
+      <publishTime>12/13/2020 13:50:36</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Propolis-extra.png">
+      <publishTime>12/13/2020 13:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Propolis-Standard.jpg">
+      <publishTime>01/06/2021 20:02:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Red-krill-oil-1500.png">
+      <publishTime>12/13/2020 14:35:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_Red-krill-oil.png">
+      <publishTime>12/13/2020 14:35:24</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_royal-jelly-1530.png">
+      <publishTime>12/13/2020 14:35:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/productpage/TN_spirulina.png">
+      <publishTime>12/13/2020 14:36:50</publishTime>
+    </File>
+    <File Include="wwwroot/js/mainpage.js">
+      <publishTime>01/21/2021 22:02:09</publishTime>
+    </File>
+    <File Include="wwwroot/js/prodyctdetail.js">
+      <publishTime>01/21/2021 23:16:41</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>01/21/2021 23:16:17</publishTime>
+    </File>
+    <File Include="wwwroot/js/story.js">
+      <publishTime>01/21/2021 23:11:46</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>10/13/2020 21:05:39</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:14</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>09/12/2019 17:09:00</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:09:14</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>09/12/2019 17:07:48</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll">
+      <publishTime>09/12/2019 17:08:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

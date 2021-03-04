@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using HealthUp.DataModel;
 using HealthUp.ServiceLayer;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,26 +46,28 @@ namespace HealthUp.Web.Controllers
                     return "Please Enter Message to HealUp.";
                 }
                 // Credentials
-                var credentials = new NetworkCredential("ryan.yoonkun.lee@gmail.com", "wjsalsdud1989");
+                var credentials = new NetworkCredential("healthup777@gmail.com", "zxrxzksgibimryik");
                 // Mail message
                 var mail = new MailMessage()
                 {
-                    From = new MailAddress(Email),
+                    From = new MailAddress(Email),                    
                     Subject = "Health Up Inquiry from : " + Name,
                     Body = "Name : " + Name + "<br />" + "Email : " + Email + "<br />" + "Message : " + Message
                 };
                 mail.IsBodyHtml = true;
-                mail.To.Add(new MailAddress("ryan.yoonkun.lee@gmail.com"));
+                mail.To.Add(new MailAddress("info@healthup.co.nz"));
+                mail.CC.Add(new MailAddress("healthup777@gmail.com"));
                 // Smtp client
                 var client = new SmtpClient()
                 {
+                    Host = "smtp.gmail.com",
                     Port = 587,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Host = "smtp.gmail.com",
-                    EnableSsl = true,
-                    Credentials = credentials
+                    UseDefaultCredentials = false,                  
+                    Credentials = credentials,
+                    EnableSsl = true
                 };
+
                 client.Send(mail);
                 return "Your Email Sent Successfully!";
             }

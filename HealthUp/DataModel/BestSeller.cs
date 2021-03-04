@@ -15,5 +15,8 @@ namespace HealthUp.DataModel
         public string Name { get; set; }
         [Required]
         public string Body { get; set; }
+
+        [Required]
+        public Guid ProductId { get; set; }
     }
 }

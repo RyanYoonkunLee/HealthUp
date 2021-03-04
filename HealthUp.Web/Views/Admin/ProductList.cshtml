@@ -12,6 +12,7 @@
         <tr>
             <td scope="col">#</td>
             <td scope="col">Name</td>
+            <td scopr="col">Capsules</td>
             <td scope="col">Category Expose</td>
             <td scopr="col">Product Expose</td>
             <td scope="col">Functions</td>
@@ -23,6 +24,7 @@
         <tr>
             <td scope="row">@(i + 1)</td>
             <td scope="row">@Model[i].Name</td>
+            <td scope="row">@Model[i].Capsule</td>
             <td scope="col">@Model[i].CategoryExpose</td>
             <td scopr="col">@Model[i].ProductExpose</td>
             <td scope="row">
@@ -33,3 +35,4 @@
         }
     </tbody>
 </table>
+<a type="button" class="btn btn-warning mb-5 float-right" asp-area="" asp-controller="Admin" asp-action="Index">Back</a>

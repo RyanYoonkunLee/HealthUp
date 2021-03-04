@@ -1,6 +1,6 @@
 ﻿@model HealthUp.ViewModel.ArticleDetailViewModel
 @{
-    ViewData["Title"] = "ArticleDetail";
+    ViewData["Title"] = "Article Detail";
     <link href="~/css/article.css" rel="stylesheet" />
 }
 <div class="max-width">
@@ -16,7 +16,7 @@
     <p class="relatetitle titlefont brandcolor">Relate Product</p>
     @foreach (var item in ViewBag.RelatedProducts)
     {
-        <a href = "@Url.Action("ProductDetail", "Product", new { id = @item.Id })">
+        <a href = "@Url.Action("FindName", "Product", new { id = @item.Id })">
             <div class="relateboxlayout float-left">
                 <div class="relateimagelayout">
                     <img class="relateimage" src="@item.ThumbnailImage" />

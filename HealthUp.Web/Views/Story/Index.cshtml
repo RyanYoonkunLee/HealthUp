@@ -1,6 +1,6 @@
 ﻿@model HealthUp.DataModel.Email
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Story";
     <link rel="stylesheet" href="~/css/story.css" />
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
     <script src="~/js/story.js"></script>
@@ -11,17 +11,19 @@
 </div>
 
 <div>
-    <div class="width-30 storylefttextpadding float-left">
-        <p class="brandcolor titlefont storylefttext">HealthUP was created in New Zealand with the aim of providing good quality health supplements to enable people to live healthy.</p>
-    </div>
-    <div class="width-70 storyrighttextpadding float-left">
+    <div class="storyrighttextpadding float-left">
         <div>
-            <p class="titlefont brandcolor storytitle">OUR VISION</p>
-            <p class="textfont storybody">HealthUP is a New Zealand health product company which produces a wide range of products designed to boost natural immunity and to supplement bodily nutrients using good quality New Zealand and import ingredients. We produce products in a range of convenient packs, including colostrum, green mussel, propolis, bilberry plus vitamin C, omega3, royal jelly, manuka honey.</p>
-        </div>
-        <div>
-            <p class="titlefont brandcolor storytitle">OUR MISSON</p>
-            <p class="textfont storybody">We have been operating successfully since 2009, selling our products to a wide range of specialist health food outlets, both throughout New Zealand and overseas. We give priority to integrity and reliability as well as innovation to ensure that our customers can benefit from the consist quality of our products as well the latest knowledge about healthcare products.</p>
+            <p class="titlefont brandcolor storytitle">OUR VISION & MISSON</p>
+            <p class="textfont storybody">We aim to keep our communities healthy through our business, serve them with humility and honesty, and help the underprivileged.</p>
+
+            <ul>
+                <li>
+                    <p class="textfont storybody">We supply the right health supplements through high-quality ingredients for the health of our customers.</p>
+                </li>
+                <li>
+                    <p class="textfont storybody">We use some of our revenue to help people and organisations in need.</p>
+                </li>
+            </ul>            
         </div>
     </div>
 </div>
@@ -33,8 +35,8 @@
         <div class="contactbox">
             <p class="titlefont brandcolor contacttitle">CONTACT US</p>
             <p><strong>Phone: </strong>+64 9 442 5992</p>
-            <p><strong>Email: </strong>healthup777@gmail.com</p>
-            <p><strong>Address: </strong>HealthUP Corporation Inc,</p>
+            <p><strong>Email: </strong>info@healthup.co.nz</p>
+            <p><strong>Address: </strong>HealthUP Ltd.</p>
             <p>129 Onewa Road, Northcote, Auckland</p>
         </div>
         <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
@@ -42,7 +44,7 @@
             <a href="https://1map.com/map-embed">1 Map</a>
         </div>
     </div>
-    <div class="halfwidth float-left storycontact">
+    <div class="halfwidth float-left storycontact" id="contact">
         <div class="contactbox">
             <p class="mb-2">For any questions or you’d like to know more about what we do simply reach out to us at <strong>info@healthup.co.nz</strong> or fill out the form below. </p>
             <p>Our team will get back to you as soon as possible.</p>

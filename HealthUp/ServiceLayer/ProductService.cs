@@ -22,12 +22,13 @@ namespace HealthUp.ServiceLayer
         {
             Product productData = new Product();
             productData.Name = productView.Name;
+            productData.Capsule = productView.Capsule;
             productData.Description = productView.Description;
             productData.Benefits = productView.Benefits;
             productData.PackSize = productView.Size;
             productData.Dosage = productView.Dosage;
             productData.Ingredients = productView.Ingredient;
-            
+            productData.Warning = productView.Warning;
             string function = "";
             for(var i = 0; 
                 i < productView.Function.Count; i++)
@@ -69,6 +70,7 @@ namespace HealthUp.ServiceLayer
             ProductViewModel productView = new ProductViewModel();
             productView.Id = product.Id;
             productView.Name = product.Name;
+            productView.Capsule = product.Capsule;
             if(product.Description != null)
             {
                 productView.Description = Regex.Replace(product.Description, @"\r\n|\r|\\n", "<br />");
@@ -121,6 +123,7 @@ namespace HealthUp.ServiceLayer
             productView.ContainNoAdded = product.ContainNoAdded;
             productView.CategoryExpose = product.CategoryExpose;
             productView.ProductExpose = product.ProductExpose;
+            productView.Warning = product.Warning;
             return productView;
         }
 
@@ -249,11 +252,12 @@ namespace HealthUp.ServiceLayer
                 ProductListViewModel view = new ProductListViewModel();
                 view.Id = original[i].Id;
                 view.Name = original[i].Name;
+                view.Capsule = original[i].Capsule;
                 if (select != null)
                 {
                     for (var j = 0; j < select.Count; j++)
                     {
-                        if (select[j] == original[i].Name)
+                        if (Guid.Parse(select[j]) == original[i].Id)
                         {
                             view.Selected = true;
                             break;

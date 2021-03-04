@@ -1,4 +1,11 @@
-﻿.articlebanner {
+﻿a {
+    color:black;
+}
+
+a:hover a:link {
+    color:none;
+}
+.articlebanner {
     background-image: url('../images/article/Health-Article-top-banner.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -36,8 +43,14 @@
     font-size: 25px;
 }
 
-.articlelistbody{
+.articlelistbody {
     font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 136px;
+}
+.hoverblack:hover{
+    color: black;
 }
 
 .articlebutton {
@@ -51,6 +64,13 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 25px;
+}
+
+.articlebutton:hover {
+    background-color: white;
+    border-color: #215357;
+    color: #215357 !important;
+    font-weight: bold;
 }
 
 /*Article Detail Page*/
@@ -92,14 +112,21 @@
     width: 25%;
 }
 
+@media(min-width: 788px) and (max-width: 1200px){
+    .articleListlayout {
+        width: 45%;
+    }
+}
+
 @media (max-width: 787px){
     .articlebanner {
         background-image: url('../images/article/M-Health-Article-top-banner-new.jpg');
     }
 
     .articletitle {
-        padding-top: 25%;
-        padding-bottom: 25%;
+        padding-top: 35%;
+        padding-bottom: 35%;
+        font-size: 6vw;
     }
 
     .articleListlayout {

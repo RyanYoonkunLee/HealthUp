@@ -5877,11 +5877,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp.Data.Sql\\HealthUp.Data.Sql.csproj",
+      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\Live Project\\HealthUp\\HealthUp.Data.Sql\\HealthUp.Data.Sql.csproj",
       "projectName": "HealthUp.Data.Sql",
-      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp.Data.Sql\\HealthUp.Data.Sql.csproj",
+      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\Live Project\\HealthUp\\HealthUp.Data.Sql\\HealthUp.Data.Sql.csproj",
       "packagesPath": "C:\\Users\\Yoonkun Lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp.Data.Sql\\obj\\",
+      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\Live Project\\HealthUp\\HealthUp.Data.Sql\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5900,8 +5900,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp\\HealthUp.csproj": {
-              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\HealthUp\\HealthUp\\HealthUp.csproj"
+            "C:\\Users\\Yoonkun Lee\\Desktop\\Live Project\\HealthUp\\HealthUp\\HealthUp.csproj": {
+              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\Live Project\\HealthUp\\HealthUp\\HealthUp.csproj"
             }
           }
         }

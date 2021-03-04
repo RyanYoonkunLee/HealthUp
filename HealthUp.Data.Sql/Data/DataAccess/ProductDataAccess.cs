@@ -107,7 +107,7 @@ namespace HealthUp.Data.Sql.Data.DataAccess
 
             foreach(var item in nameList)
             {
-                var product = FindByName(item);
+                var product = Find(Guid.Parse(item));
                 selectedProduct.Add(product);
             }
 

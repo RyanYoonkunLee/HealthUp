@@ -31,6 +31,10 @@ namespace HealthUp.Web.Controllers
             {
                 productList = _data.GetProducts();                           
             }
+            else if(searchcolumn.Equals("Category") && sort.Equals("All"))
+            {
+                productList = _data.GetProducts();
+            }
             else if (searchcolumn.Equals("Category") && sort != null)
             {
                 productList = _data.GetCategoryByName(sort);
@@ -74,25 +78,51 @@ namespace HealthUp.Web.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("ProductDetail", "Product", new { id = productId.Id });
+                    return RedirectToAction("FindName", "Product", new { id = productId.Id });
                 }
             }
 
         }
-
-        public IActionResult ProductDetail(Guid id)
+        public IActionResult FindName(Guid id)
         {
-            var findProduct = _data.Find(id);
-            var viewProduct = service.ConvertDataToView(findProduct, false);
-            ViewBag.Images = service.GetImages(findProduct.ProductImages);
+            var product = _data.Find(id);
+            return RedirectToAction("ProductDetail", new { name = product.Name, id = product.Id});
+        }
+
+        [Route("/ProductItem/{name}")]
+        public IActionResult ProductDetail(string name, Guid id)
+        {
+            var product = _data.Find(id);
+            var viewProduct = service.ConvertDataToView(product, false);
+            ViewBag.Images = service.GetImages(viewProduct.ProductImages);
             return View(viewProduct);
         }
 
-        public IActionResult Delete(Guid id)
+        public List<ProductViewModel> FindCategory(string name)
         {
-            _data.Delete(id);
+            var products = new List<Product>();
+            if (name.Equals("All"))
+            {
+                products = _data.GetProducts();
+            }
+            else
+            {
+                products = _data.GetCategoryByName(name);
+            }
 
-            return RedirectToAction("Index", "Product");
+            var productview = service.ConvertDataListToView(products);
+            return productview;
+        }
+
+        public List<ProductViewModel> FindFunction(string name)
+        {
+            var products = new List<Product>();
+
+            products = _data.GetFunctionByName(name);
+            
+
+            var productview = service.ConvertDataListToView(products);
+            return productview;
         }
     }
 }

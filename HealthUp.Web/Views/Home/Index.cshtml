@@ -4,124 +4,154 @@
     <link rel="stylesheet" href="~/css/mainpage.css" />
     <link rel="stylesheet" href="~/css/Shared.css" />
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-}
-
-
-<div class="mainbanner" id="mainbanner">
-    <div class="mainbanertext">
-        <h2 class="titlefont">DO BETTER BY KNOWING</h2>
-        <h2 class="titlefont">OUR PEOPLE BETTER</h2>
-    </div>
-    <a class="btn btn-outline-secondary buttoncolor" asp-area="" asp-controller="Product" asp-action="Index">OUR PRODUCTS</a>
-</div>
-
-@foreach (var item in ViewBag.BestSellers)
-{
-    <div class="bestseller mySlides fade" style="width:100%">
-        <div>
-            <div class="bestsellerimagewidth">
-                <img class="bestlogo" src="~/images/mainpage/bestseller/icon.png" />
-                <img class="bestimgage maxwidth titlefont" src=@item.ThumbnailImage />
-            </div>
-            <div class="bestsellertextwidth">
-                <p class="titlecolor bestsellertitle titlefont">@item.Name</p>
-                <p class="textcolor bestsellertext textfont">@item.Body</p>
-                <div class="bestsellerbutton">
-                    <a asp-area="" asp-action="SearchProduct" asp-controller="Product" asp-route-name="@item.Name"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-<div class="newproductlayout">
-    @foreach (var newproduct in ViewBag.NewProducts)
-    {
-        <div class="newproduct" style="width:100%">
-            <div>
-                <div class="bestsellerimagewidth">
-                    <img class="bestlogo" src="~/images/mainpage/newproduct/icon.png" />
-                    <img class="bestimgage maxwidth" src=@newproduct.ThumbnailImage />
-                </div>
-                <div class="bestsellertextwidth">
-                    <p class="bestsellertitle whitebannertext titlefont">@newproduct.Name</p>
-                    <p class="bestsellertext whitebannertext textfont">@newproduct.Body</p>
-                    <div class="bestsellerbutton">
-                        <a asp-area="" asp-action="SearchProduct" asp-controller="Product" asp-route-name="@newproduct.Name"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    <div style="text-align:center">
-        @for (var i = 0; i < ViewBag.NewProducts.Count; i++)
-        {
-            <span class="dot" onclick="currentSlide(i)"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        function random() {
+            var random = Math.floor(Math.random() * 3) + 1;
+            var image = "url('../images/mainpage/mainbanner/banner" + random + ".jpg')";
+            document.getElementById("mainbanner").style.backgroundImage = image;
+            var image1 = "url('../images/mainpage/mainbanner/M-banner" + random + ".jpg')";
+            document.getElementById("m-banner").style.backgroundImage = image1;
         }
-    </div>
-</div>
+    </script>
+}
 
-<div class="overflow-hidden">
-    <p class="brandcolor productrangetitle titlefont">OUR PRODUCT RANGE</p>
-    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
-        <div class="MultiCarousel-inner">
-            @foreach (var range in ViewBag.ProductRanges)
-            {
-                <a href="@Url.Action("Index", "Product", new { sort = range.Name, searchcolumn = "Category" })">
-                    
-                    <div class="item">
-                        <div class="pad15">
-                            <img class="max-width" src=@range.ThumbnailImage />
-                            <button class="productrangebutton titlefont">@range.Name</button>
+<body onload="random()">
+    <div class="mainbanner" id="mainbanner">
+        <div class="mainbanertext">
+            <h2 class="titlefont">THE CONSTANT EFFORT FOR BETTER PRODUCTS</h2>
+            <h2 class="titlefont">DEDICATION FOR A BETTER HEALTHY LIFE</h2>
+        </div>
+        <a class="btn btn-outline-secondary buttoncolor" asp-area="" asp-controller="Product" asp-action="Index">OUR PRODUCTS</a>
+    </div>
+    <div class="m-mainbanner" id="m-banner">
+        <div class="mainbanertext">
+            <h2 class="titlefont m-maintext">THE CONSTANT EFFORT FOR BETTER PRODUCTS</h2>
+            <h2 class="titlefont m-maintext">DEDICATION FOR A BETTER HEALTHY LIFE</h2>
+        </div>
+        <a class="btn btn-outline-secondary buttoncolor" asp-area="" asp-controller="Product" asp-action="Index">OUR PRODUCTS</a>
+    </div>
+
+    <div class="bestseller">
+        @foreach (var item in ViewBag.BestSellers)
+        {
+            <div class=" mySlides overflow-hidden" style="width:100%">
+                <div style="width:100%">
+                    <div class="bestsellerimagewidth">
+                        <img class="bestlogo" src="~/images/mainpage/bestseller/icon.png" />
+                        <img class="bestimgage maxwidth titlefont" loading="lazy" src=@item.ThumbnailImage />
+                    </div>
+                    <div class="bestsellertextwidth">
+                        <p class="titlecolor bestsellertitle titlefont">@item.Name</p>
+                        <p class="textcolor bestsellertext textfont">@item.Body</p>
+                        <div class="bestsellerbutton">
+                            <a asp-area="" asp-action="FindName" asp-controller="Product" asp-route-id="@item.ProductId"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
                         </div>
                     </div>
-                                
-                </a>
+                </div>
+            </div>
+        }
+        <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+        <div style="text-align:center">
+            @for (var i = 0; i < ViewBag.NewProducts.Count; i++)
+            {
+                <span class="dot1" onclick="currentSlide1(@i +1)"></span>
             }
-
         </div>
-        <a class="leftLst">&#10094;</a>
-        <a class="rightLst">&#10095;</a>
-    </div>
-</div>
 
-<div class="marginbottom">
-    <h3 class="whylayout titlefont">WHY CHOOSE US?</h3>
-    <div class="itemlayout">
-        <div class="itemwidth">
-            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon1.png" />
-            <div class="float-left whytextbox">
-                <p class="titletext titlefont">MADE IN NZ</p>
-                <p class="textfont">All our products are produly made in New Zealand.</p>
+    </div>
+
+
+    <div class="newproductlayout ">
+        @foreach (var newproduct in ViewBag.NewProducts)
+        {
+            <div class="newproduct" style="width:100%">
+                <div>
+                    <div class="bestsellerimagewidth">
+                        <img class="bestlogo" src="~/images/mainpage/newproduct/icon.png" />
+                        <img class="bestimgage maxwidth" loading="lazy" src=@newproduct.ThumbnailImage />
+                    </div>
+                    <div class="bestsellertextwidth">
+                        <p class="bestsellertitle whitebannertext titlefont">@newproduct.Name</p>
+                        <p class="bestsellertext whitebannertext textfont">@newproduct.Body</p>
+                        <div class="bestsellerbutton">
+                            <a asp-area="" asp-action="SearchProduct" asp-controller="Product" asp-route-name="@newproduct.Name"><p class="bestsellerbannertext">FIND OUT MORE</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div style="text-align:center">
+            @for (var i = 0; i < ViewBag.NewProducts.Count; i++)
+            {
+                <span class="dot" onclick="currentSlide(@i +1)"></span>
+            }
+        </div>
+    </div>
+
+    <div class="overflow-hidden">
+        <p class="brandcolor productrangetitle titlefont">OUR PRODUCT RANGE</p>
+        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+            <div class="MultiCarousel-inner">
+                @foreach (var range in ViewBag.ProductRanges)
+                {
+                    <a href="@Url.Action("Index", "Product", new { sort = range.Name, searchcolumn = "Category" })">
+
+                        <div class="item">
+                            <div class="pad15">
+                                <img class="max-width" loading="lazy" src=@range.ThumbnailImage />
+                                <button class="productrangebutton titlefont">@range.Name</button>
+                            </div>
+                        </div>
+
+                    </a>
+                }
+
+            </div>
+            <a class="leftLst">&#10094;</a>
+            <a class="rightLst">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="marginbottom">
+        <h3 class="whylayout titlefont">WHY CHOOSE US?</h3>
+        <div class="itemlayout">
+            <div class="itemwidth">
+                <img class="float-left whyimage" loading="lazy" src="~/images/mainpage/whychooseus/Home page_why choose us icon1.png" />
+                <div class="float-left whytextbox">
+                    <p class="titletext titlefont">MADE IN NZ</p>
+                    <p class="textfont">All our products are produly made in New Zealand.</p>
+                </div>
+            </div>
+            <div class="itemwidth">
+                <img class="float-left whyimage" loading="lazy" src="~/images/mainpage/whychooseus/Home page_why choose us icon2.png" />
+                <div class="float-left whytextbox">
+                    <p class="titletext titlefont">LAB TESTED</p>
+                    <p class="textfont">All our products are lab tested for the best quality.</p>
+                </div>
+            </div>
+            <div class="itemwidth">
+                <img class="float-left whyimage" loading="lazy" src="~/images/mainpage/whychooseus/Home page_why choose us icon3.png" />
+                <div class="float-left whytextboxlastitem">
+                    <p class="titletext titlefont">INNOVATION</p>
+                    <p class="textfont">Develop unique and high quality formulas with premium quality ingredients</p>
+                </div>
             </div>
         </div>
-        <div class="itemwidth">
-            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon2.png" />
-            <div class="float-left whytextbox">
-                <p class="titletext titlefont">LAB TESTED</p>
-                <p class="textfont">All our products are lab tested for the best quality.</p>
-            </div>
-        </div>
-        <div class="itemwidth">
-            <img class="float-left whyimage" src="~/images/mainpage/whychooseus/Home page_why choose us icon3.png" />
-            <div class="float-left whytextboxlastitem">
-                <p class="titletext titlefont">INNOVATION</p>
-                <p class="textfont">Develop unique and high quality formulas with premium quality ingredients</p>
-            </div>
-        </div>
     </div>
-</div>
 
-<div class="dolayout">
-    <div class="doimgwidth">
-        <img class="max-width" src="~/images/mainpage/bottombanner/bottombanner.png" />
+    <div class="dolayout">
+        <div class="doimgwidth">
+            <img class="max-width" loading="lazy" src="~/images/mainpage/bottombanner/bottombanner.png" />
+        </div>
+        <div class="dotextbox">
+            <p class="dotitle titlefont">DO BETTER BY KNOWING OUR PEOPLE BETTER</p>
+            <p class="dotext textfont">HealthUP was created in New Zealand to provide right quality health supplements to enable people to live healthily.</p>
+            <p class="dotext textfont">Our emphasis is on using pure and natural ingredients to make health supplements of consistent quality.</p>
+        </div>
     </div>
-    <div class="dotextbox">
-        <p class="dotitle titlefont">DO BETTER BY KNOWNG OUT PEOPLE BETTER</p>
-        <p class="dotext textfont">HealthUP was created in New Zealand with the aim of providing good quality health supplements to enable people to live healthy.</p>
-        <p class="dotext textfont">Our emphasis is on using pure and natural ingredients to make health supplements of consistent quality.</p>
-    </div>
-</div>
+</body>
 <script src="~/js/mainpage.js"></script>

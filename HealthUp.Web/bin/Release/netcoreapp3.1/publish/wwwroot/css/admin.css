@@ -1,0 +1,32 @@
+﻿.adminbanner {
+    background-image: url('../images/admin/Admin-page-top-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 15%;
+}
+
+.adminnavbutton {
+    border-color: #215357;
+    width: 25%;
+    float: left;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.createbutton {
+    background-color: #215357;
+    color: white;
+    width: 10%;
+}
+
+thead {
+    font-weight: bold;
+    font-family: Gotham-Bold;
+}
+
+.adminbuttonlayout{
+    margin-left: 10%;
+    margin-right: 10%;
+    width:80%;
+}
